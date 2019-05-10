@@ -1,0 +1,29 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/bionic64"
+  # Gives an ip address through dhcp.
+  config.vm.network "private_network", type: "dhcp"
+  config.vm.network "public_network",
+    use_dhcp_assigned_default_route: true
+  # Forwards port 80 on the VM to port 8080 on the host machine.
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+  # Forwards port 3306 on the VM to port 3306 on the host machine.
+  config.vm.network "forwarded_port", guest: 3306, host: 3306
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "VM for Testing"
+    vb.gui = false
+    # Gives the VM 4GB of RAM.
+    vb.memory = "4096"
+    # Gives the VM 2 CPUs
+    vb.cpus = 2
+  end
+
+  config.vm.provision "shell", inline: <<-SHELL
+	sudo apt-get -y update
+	sudo apt-get -y upgrade
+    cp /vagrant/setup.sh /home/vagrant
+  SHELL
+end
