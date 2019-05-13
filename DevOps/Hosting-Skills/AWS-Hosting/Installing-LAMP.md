@@ -24,7 +24,8 @@ Note: I am using Vagrant to create a VM so my user is vagrant and my home is loc
     echo "Setting up a LAMP Stack."
     echo "Updating the package list and all packages to the latest version."
     sleep 2s
-    sudo touch /home/vagrant/apt-output.txt && sudo chmod 777 apt-output.txt
+    sudo touch /home/vagrant/apt-output.txt
+    sudo chmod 777 /home/vagrant/apt-output.txt
     sudo apt-get -y update &>> /home/vagrant/apt-output.txt
     sudo apt-get -y upgrade &>> /home/vagrant/apt-output.txt
     echo "Preparing for phpmyadmin unattended install."
@@ -53,7 +54,7 @@ Note: I am using Vagrant to create a VM so my user is vagrant and my home is loc
     echo "Finished configuring mysql."
     echo "Finished installing LAMP stack."
     echo "You may access the machine through the following ip: "
-    ip addr | grep "inet 192"
+    echo "$(ip addr | grep "inet 192")" | sed 's-inet --g' |sed 's-/24 brd 192.168.0.255 scope global dynamic enp0s8--g'
     ```
 
 ### Installing Apache
