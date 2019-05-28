@@ -735,3 +735,25 @@
                 return bytes;
             }
             ```
+        - A better version:
+            ```
+            import java.io.*;
+            import java.util.*;
+            import java.text.*;
+            import org.apache.commons.io.FileUtils;
+
+            public void takeScreenshot(String testName) {
+                WebDriver augmentedDriver = new Augmenter().augment(driver);
+                File screenshot = ((TakesScreenshot)augmentedDriver).
+                    getScreenshotAs(OutputType.FILE);
+                try {
+                    DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd.HH-mm-ss");
+                    Date date = new Date();
+                    FileUtils.copyFile(screenshot, new File("C:/selenium/" + testName + "-" +
+                        dateFormat.format(date)
+                        +".png"));
+                    } catch(IOException e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+            ```

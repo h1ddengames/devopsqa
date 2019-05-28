@@ -2,32 +2,65 @@
 - This document contains all information related to any questions that can be asked about project management.
 #
 
-#### Agile Methodology
-- Agile Methodology is 
+#### Agile Methodology/Manifesto
+- Agile Methodology/Manifesto is a set of core values and beliefs that can be applied towards software development. In this manifesto we need to value the elements in the column on the left rather than the right:
+    | Left                          | Right                         |
+    | -----                         | -----                         |
+    | Individual and interactions   | Processes and tools           |
+    | Working software              | Comprehensive documentation   |
+    | Customer collaboration        | Contract negotiation          |
+    | Responding to change          | Following a plan              |
+
+- To reiterate: while the contents of the entire table are important, we should value the elements on the left more.
+
+- How we achieve these goals are left to the methods below:
 
     #
     #### Scrum
-    - Scrum is 
+    - Scrum is an implementation of Agile. It is a simple framework for effective team collaboration on complex products. 
+    - Scrum replaces a programmed algorithmic approach with a heuristic one, with respect for people and self-organization to deal with unpredictability and solving complex problems.
 
         #
-        #### Standups
-        - Standups are 
+        #### Product Backlog
+        - The product backlog is a list of requirements that the customer or product owner gives to the developers.
 
         #
         #### Sprints
-        - Sprints are
+        - Sprints are an allocated time to complete several items from the product backlog based on team size and a concensus on the duration of the allocated time (usually 2 weeks). 
+        - Before a sprint starts, there is a sprint planning phase where the developers choose tasks based on a priority system.
+        - At the end of this sprint planning phase, a sprint backlog is created. This is essentially a list of all the tasks that need to be completed before the sprint is finished.
+        - Once the sprint has finished, there is a meeting called a sprint review where usually the product is demoed to the product owner or customer.
+        - Finally a sprint retrospective is done to help the team members understand what processes went well and what needs to be worked on for the following sprint.
+
+        #
+        #### Standups
+        - Standups are a way for effective communication between team members.
+        - Everyday for about 15 minutes, the team gathers together and explains what's been accomplished and what the team needs to wait for in order to continue finishing the items on the sprint backlog.
 
     #
     #### Kanban
-    - Kanban is 
+    - Kanban is a workflow management method designed to help you visualize your work, maximize efficiency and be agile.
+    - There is a board where tasks are divided based on completion. 
+        - The number of tasks are based on the amount of developers/testers
+        - The number of divisions will be based on the team and what tasks they have to do but in general this is what the board looks like:
+
+    | To-Do     | Development   | Test    | Done    |
+    | --        | --            | --      | --      |
+    | Task 7    | Task 5        | Task 3  | Task 1  |
+    | Task 8    | Task 6        | Task 4  | Task 2  |
+    
+    - Whenever a task has finished within each column, it will wait until the column on the right has an available space.
+        - For example: Once task 5 is done, it must wait until task 3 has moved from Test to Done then it may be moved into the Test column. Then everything to the right of it moves over one column. 
+
+    - This system doesn't have sprints like Scrum does but is instead a continuous pace that is kept through the lifecycle of a product.
 
     #
     #### Gantt Chart
-    - Gantt Chart is 
+    - Gantt Chart is a visual representation of a project schedule which shows all the tasks as well as dependencies.
 
     #
     #### Burndown Chart
-    - Burndown Chart is 
+    - Burndown Chart is a graph that helps track the relationship between the remaining days of a sprint and the number of hours.
 #
 #### SDLC - Software Development Life Cycle
 
