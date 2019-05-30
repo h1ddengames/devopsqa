@@ -100,7 +100,74 @@ In order to create a Keyword driven framework, you need following things:
 
 #
 #### Behaviour Driven Testing
-- 
+- Behaviour Driven Testing is an Agile software development process that encourages collaboration between developers, QA and non-technical or business participants in a software project.
+- This communication is achieved through a language called Gherkin.
+  - Gherkin uses a set of special keywords to give structure and meaning to executable specifications. 
+  - Most lines in a Gherkin document start with one of the keywords:
+    - Feature
+    - Rule
+    - Example (or Scenario)
+    - Given
+    - When
+    - Then
+    - And
+    - But
+    - Background
+    - Scenario Outline (or Scenario Template)
+    - Examples
+  - Comment lines are allowed anywhere in the file. They begin with zero or more spaces, followed by a hash sign (#) and some text. Comments do have to start on a new line.
+  - Example login.feature
+    ```
+    Feature: login to the system. User should be signed into the system when he provides valid username and password 
+    Scenario: Successful login with Valid Credentials
+
+    # The website is ...
+    Given User is at the Home Page 
+    And Navigate to Login Page 
+    When User enters credentials 
+    | username | password | 
+    | testuser_1 | Test@123 | 
+    And User login into a system 
+    Then user is on the main profile page
+    ```
+
+- Once the feature file is created, each step needs to be defined into Step Definitions. All that really means is that you have to write the syntax that Cucumber expects:
+  - Using the above example for this example:
+    ```
+    public LoginStepDefinition {
+        Given("User is at the Home Page", () -> {
+            driver.navigate().to("https://yourwebsitehere.com/");
+        });
+
+        And("Navigate to Login Page", () -> {
+            WebElement loginButton = driver.findElementBy...
+            loginButton.Click();
+        })
+
+        etc.
+    }
+    ```
+
+- Finally create a runner class that will read the feature files then run the step definitions.
+  - Example:
+    ```
+    import cucumber.api.CucumberOptions;
+    
+    @RunWith(Cucumber.class)
+    @CucumberOptions(
+        features = {
+            "/path/to/your/login.feature",
+            "/path/to/another/featureyouwanttorun.feature"
+        },
+        glue = {"your.package.containing.step.definitions"},
+        plugin = {
+            "pretty:target/cucumber-test-report/cucumber-pretty.txt",
+			"html:target/cucumber-test-report/",
+			"json:target/cucumber-test-report/cucumber-report.json",
+			"junit:target/cucumber-test-report/test-report.xml"
+        }
+    )
+    ```
 
 #
 #### Database Testing

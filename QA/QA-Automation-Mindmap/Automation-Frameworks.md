@@ -388,7 +388,7 @@
 
 #
 #### Testing Frameworks
--  Testing Frameworks are 
+-  Testing Frameworks are comprised of a combination of practices and tools that are designed to help QA professionals test more efficiently.
 
     #
     #### TestNG
@@ -466,8 +466,8 @@
             </test>
         </suite>
         ```
-        3. Run this file in your IDE (such as IntelliJ IDEA or Eclipse) or Run TestNGSimpleTest class. 
-        4. The results will be output into a folder called test-output.
+        1. Run this file in your IDE (such as IntelliJ IDEA or Eclipse) or Run TestNGSimpleTest class. 
+        2. The results will be output into a folder called test-output.
 
         #### TestNG Annotations
         These are contained in the org.testng.annotations package:
@@ -673,13 +673,13 @@
         - @Test is a replacement of org.junit.TestCase which indicates that public void method to which it is attached can be executed as a test Case.
     
     - Annotation Execution Order:
-        0. Execute the @BeforeClass method in this class.
-        1. Execute the @Before methods in the superclass
-        2. Execute the @Before methods in this class
-        3. Execute a @Test method in this class
-        4. Execute the @After methods in this class
-        5. Execute the @After methods in the superclass
-        6. Execute the @AfterClass method in this class.
+        1. Execute the @BeforeClass method in this class.
+        2. Execute the @Before methods in the superclass
+        3. Execute the @Before methods in this class
+        4. Execute a @Test method in this class
+        5. Execute the @After methods in this class
+        6. Execute the @After methods in the superclass
+        7. Execute the @AfterClass method in this class.
 
     - Example Test Case:
         ```
@@ -692,24 +692,120 @@
 
 #
 #### Parallel Execution
-- Parallel Execution is 
+- Instead of running tests sequentially, or one after the other, parallel testing allows us to execute multiple tests at the same point in time across different environments or part of the code base.
 
     #
     #### Thread-safe Driver
+    - According to the FAQ section of the Selenium github repository, WebDriver is NOT thread-safe. The FAQ goes onto state that if we can serialize access to the underlying driver instance, we can share a reference in more than one thread but it is not advisable.
+    - With the way I have setup the CommonAutomationFramework, I take advantage of ThreadLocal serialization of the WebDriver as Follows:
+        ```
+        package framework;
+        import org.openqa.selenium.chrome.*;
+        import org.openqa.selenium.firefox.*;
+
+        public class DriverFactory {
+            private static DriverFactory instance = new DriverFactory();
+            private static final ThreadLocal<ChromeDriver> chromeDriverThreadLocal = new ThreadLocal<ChromeDriver>() {
+                @Override
+                protected ChromeDriver initialValue() {
+                    ChromeOptions options = new ChromeOptions().addArguments("--start-maximized", "--headless");
+                    return new ChromeDriver(options);
+                }
+            };
+
+            private static final ThreadLocal<FirefoxDriver> firefoxDriverThreadLocal = new ThreadLocal<FirefoxDriver>() {
+                @Override
+                protected FirefoxDriver initialValue() {
+                    FirefoxOptions options = new FirefoxOptions().addArguments("--start-maximized", "--headless");
+                    return new FirefoxDriver(options);
+                }
+            };
+
+            public static DriverFactory getInstance() { return instance; }
+            public ChromeDriver getChromeDriver() { return chromeDriverThreadLocal.get(); }
+            public FirefoxDriver getFirefoxDriver() { return firefoxDriverThreadLocal.get(); }
+
+            public void setChromeDriver(ChromeDriver driver) { chromeDriverThreadLocal.set(driver); }
+            public void setFirefoxDriver(FirefoxDriver driver) { firefoxDriverThreadLocal.set(driver); }
+
+            private DriverFactory() { }
+
+            public void removeDrivers() {
+                if(getChromeDriver() != null) {
+                    try {
+                        getChromeDriver().close(); getChromeDriver().quit();
+                    } catch(Exception e) { e.printStackTrace(); }
+                }
+                if(getFirefoxDriver() != null) {
+                    try {
+                        // When there's one browser window and .close() implicitly calls .quit()
+                        getFirefoxDriver().close();
+                    } catch (Exception e) { e.printStackTrace(); }
+                }
+                chromeDriverThreadLocal.remove(); firefoxDriverThreadLocal.remove();
+            }
+        }
+        ```
 
 #
 #### Reporting
-- Reporting is 
+- Reporting is generating documentation on if a test passed or failed and the logs that the user and machine generated during the test.
 
     #
     #### TestNG Reporting
+    - Reporting is generated into the folder of your choosing by including this in the POM:
+        ```
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+            <dependency>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+            </dependency>
 
+            <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+            <dependency>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M3</version>
+            </dependency>
+        </dependencies>
+
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                    <configuration>
+                        <release>11</release>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.0.0-M3</version>
+                    <configuration>
+                        <suiteXmlFiles>
+                            <suiteXmlFile>testng-simpletest.xml</suiteXmlFile>
+                        </suiteXmlFiles>
+                        <argLine>
+                            --illegal-access=permit
+                        </argLine>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
+        ```
+  
     #
     #### Cucumber Reporting
+    - Similar to the above.
 
     #
     #### Recording
-    - Recording is 
+    - Recording is creating a video/screenshot of the test at the moment it passes or fails.
 
         #
         #### Video
