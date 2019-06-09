@@ -5,11 +5,11 @@
 #### Variable, Field, Attribute, Property 
 - Variable is the name given to a memory location. The basic unit of storage in a program.
 - Field is a data member of a class. Can be public static, non-static, and final.
-- Attribute is anoter term for a field. Typically a public field that can be accessed directly. 
+- Attribute is another term for a field. Typically a public field that can be accessed directly. 
 - Property is also used for fields and it typically has a getter and setter combination. 
 
 #
-#### Primative Data Types
+#### Primitive Data Types
 - boolean 
 - byte 
 - char 
@@ -37,7 +37,7 @@
 
 #
 #### Java Data Structures / Java Collections Framework
-- The Java Collections Framework provides several classes and interfaces to represent a group of ojects as a single unit. This collection is stored in java.util.Collection and java.util.Map packages.
+- The Java Collections Framework provides several classes and interfaces to represent a group of objects as a single unit. This collection is stored in java.util.Collection and java.util.Map packages.
 
 - The benefits of using this collection framework are that it contains a consistent api (contains most common methods), reduces programming effort (no need to reinvent the wheel), and increases performance (by giving high-performance implementations of useful data structures and algorithms)
 
@@ -58,11 +58,12 @@
     - PriorityQueue
     - HashMap
     - HashTable (synchronized)
+    - and many more depending on your needs.
     
     #
     #### Array
 
-    - Arrays are objects that act as data stores that hold the same type of objects in all it's indicies.
+    - Arrays are objects that act as data stores that hold the same type of objects in all it's indices.
     - Index numbering starts at 0 and the size of the array must be specified with an int. 
 
     - Once the size of an array has been set, it cannot be changed. 
@@ -79,7 +80,7 @@
         int arrayOfInts[]
         ```
 
-        the prefered way of declaring a one-dimensional array is:
+        the preferred way of declaring a one-dimensional array is:
 
         ```
         type[] varName; 
@@ -87,17 +88,38 @@
         long[] arrayOfLongs;
         CustomType[] arrayOfCustomType; 
         ```
+        The above is the preferred way because as we read English left to right, we can quickly see that the following variable name is holding an array of whatever type.
 
-    - Initalizing a one-dimensional array:
+    - Initializing a one-dimensional array:
         ```
-        varName = new type[size];
+        // Template
+        type[] varName = new type[size];
 
+        // In two lines with the declaration on the first line and assigning on the second.
         int[] intArray;
         intArray = new int[20];
 
+        // Declaring and assigning in one line.
         int[] arrayOfInts = new int[20];
 
+        // Declaring, assigning, and inserting data into an array in one line.
         int[] anotherIntArray = new int[] { 1, 2, 3, 4, 5, 9, 125, 358, 4322 };
+        ```
+    
+    - Initializing a two-dimensional array: (Think of this as a table with columns and rows)
+        ```
+        // The size does not have to be the same on both dimensions.
+        // Template
+        type[][] varName = new type[size][size];
+
+        int[][] intArray;
+        intArray = new int[10][10];
+
+        // OR we can set the sizes of the dimensions of the array to a different number on each.
+        intArray = new int[15][4];
+
+        // Declaring and assigning in one line.
+        byte[][] arrayOfBytes = new byte[32][64];
         ```
 
     - Assigning a new element in an array:
@@ -118,17 +140,31 @@
         ```
 
     - Trying to access an element outside of the array size will throw a ArrayIndexOutOfBoundsException
+        ```
+        int[] intArray = new int[] { 1, 2, 3, 4, 5}
+        for(int i = 0; i <= 5; i++) {
+            System.out.println(intArray[i]);
+        } 
+        
+        // Output for the above will be:
+        // 1
+        // 2
+        // 3
+        // 4
+        // 5
+        // ArrayIndexOutOfBoundsException
+        ```
 
     #
     #### ArrayList
-    - An ArrayList is a resizeable array. While it builds off an array, the syntax is different. 
+    - An ArrayList is a resizable array. While it builds off an array, the syntax is different. 
 
     - ArrayList must be imported:
         ```
         import java.util.ArrayList;
         ```
 
-    - Initalizing an ArrayList
+    - Initializing an ArrayList
         ```
         ArrayList<String> cars = new ArrayList<String>();
         ```
@@ -140,7 +176,7 @@
 
     - Change an Item:
         ```
-        cars.set(0, "Opel");
+        cars.set(0, "Toyota");
         ```
 
     - Remove an Item:
@@ -150,7 +186,7 @@
 
     - Add an Item:
         ```
-        cars.add(0);
+        cars.add("Ford");
         ```
 
     #
@@ -168,9 +204,39 @@
     - Unsynchronized
     - Allows one null key and any number of null values.
 
+    - Creating a hashmap:
+        ```
+        HashMap<String, String> capitalCities = new HashMap<String, String>();
+        ```
+    
+    - Adding to a hashmap:
+        ```
+        capitalCities.put("England", "London");
+        capitalCities.put("Germany", "Berlin");
+        capitalCities.put("Norway", "Oslo");
+        capitalCities.put("USA", "Washington DC");
+        capitalCities.put("NotYetCreatedCountry", null);
+        ```
+    
+    - Accessing an item in a hashmap
+        ```
+        capitalCities.get("England");
+        System.out.println(capitalCities.get("England"));
+        ```
+    
+    - Remove an item in a hashmap
+        ```
+        capitalCities.remove("England");
+        ```
+    - Clear all the items in a hashmap
+        ```
+        capitalCities.clear();
+        ```
+
+
     #
     #### HashTable
-    - Syncronized (making it slower than non-syncronized data structures.)
+    - Synchronized (making it slower than non-synchronized data structures.)
     - Does not allow any null keys or values. 
 
 #
@@ -281,6 +347,11 @@ Four core OOP concepts:
     - Using simple things to represent complexity. 
         - Example: knowing how to turn a TV on but not knowing how a TV is able to turn on. 
         - Example: a car is viewed as a car not as the individual components that make up the car.
+
+    - Why should we use Abstract classes?
+      - There is no requirement that an abstract class MUST be used.
+      - Abstract classes allow developers to tell themselves and other developers that any class marked as abstract is NOT COMPLETE. 
+        - This means that when the developer or anyone else uses the class they get a compiler warning that the class needs to have it's methods implemented.
 
     - Requirements:
         - For a class to be abstract, it must be declared with the abstract keyword 
@@ -407,7 +478,7 @@ Four core OOP concepts:
 
 - Use interfaces to:
     - Achieve total abstraction.
-    - Achieve chieve multiple inheritance
+    - Achieve multiple inheritance
     - Achieve loose coupling.
 ```
 interface Animal {
@@ -433,7 +504,7 @@ class Pig implements Animal {
 #
 #### Interface vs Abstract Class
 - Interface Benefits:
-    - Multiple interfaces can be implmented. 
+    - Multiple interfaces can be implemented. 
     - Loose coupling. 
 
 - Interface Disadvantages:
@@ -471,7 +542,7 @@ class Pig implements Animal {
     - Unchecked exceptions − An unchecked exception is an exception that occurs at the time of execution. 
     - These are also called as Runtime Exceptions. These include programming bugs, such as logic errors or improper use of an API. Runtime exceptions are ignored at the time of compilation.
 
-    - Example: For example, if you have declared an array of size 5 in your program, and trying to call the 6th element of the array then an ArrayIndexOutOfBoundsExceptionexception occurs.
+    - Example: For example, if you have declared an array of size 5 in your program, and trying to call the 6th element of the array then an ArrayIndexOutOfBoundsException occurs.
 
     #
     #### Catching Exceptions
@@ -755,13 +826,13 @@ add(int, int, char) // Different order of parameters is ok too
     ```
         // Constructor called.
         1. MyObject object = new MyObject();
-        // Requires knowledge of a classname and if that class has a public constructor. - Constructor Called.
-        2. MyObject object = (MyObject) Class.forName("package.name.MyObject").newInstance();
+        // Requires knowledge of a class name and if that class has a public constructor. - Constructor Called.
+        1. MyObject object = (MyObject) Class.forName("package.name.MyObject").newInstance();
         // Object Cloning - No Constructor Called.
-        3. MyObject anotherObject = myObject();
+        1. MyObject anotherObject = myObject();
             MyObject object = (MyObject) anotherObject.clone();
         // Object Deserialization - No Constructor Called.
-        4. ObjectInputStream in = new ObjectInputStream(new FileInputStream("data.obj"));
+        1. ObjectInputStream in = new ObjectInputStream(new FileInputStream("data.obj"));
             Employee emp5 = (Employee) in.readObject();
     ```
 
