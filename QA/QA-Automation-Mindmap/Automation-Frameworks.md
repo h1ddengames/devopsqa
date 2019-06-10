@@ -25,7 +25,7 @@
             ...
         </project>
         ```
-    - It contains dependancy information:
+    - It contains dependency information:
         ```
         <project ...
             ...
@@ -73,7 +73,7 @@
 
 - Build Life Cycles, Phases and Goals: 
     - A build life cycle consists of a sequence of build phases, and each build phase consists of a sequence of goals. 
-    - Maven command is the name of a build lifecycle, phase or goal.
+    - Maven command is the name of a build life cycle, phase or goal.
         - validate - validate the project is correct and all necessary information is available
 
         - compile - compile the source code of the project
@@ -339,8 +339,8 @@
     - Behavior Driven Development gives us an opportunity to create test scripts from both the developer’s and the customer’s perspective as well. 
 
 - How it works: 
-    1. Describe the behaviour
-    2. Write step defination
+    1. Describe the behavior
+    2. Write step definition
     3. Run and fail
     4. Write code to make the step pass
     5. Run and pass

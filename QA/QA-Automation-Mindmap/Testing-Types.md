@@ -183,7 +183,7 @@ In order to create a Keyword driven framework, you need following things:
     - Once we click on Submit or a UI element with similar functionality, we run a SQL query that will check the contents of the database for the information that should have been added to it.
 
 - Required Skills: 
-    - SQL (Structred Query Language)
+    - SQL (Structured Query Language)
         - Syntax
             - Statement Types
                 - DML (Data Manipulation Language)
@@ -203,8 +203,8 @@ In order to create a Keyword driven framework, you need following things:
                     - REVOKE - withdraw user’s access privileges given by using the GRANT command.
                 - TCL (Transaction Control Language)
                     - COMMIT - commits a Transaction.
-                    - ROLEBACK - rollbacks a transaction in case of any error occurs.
-                    - SAVEPOINT - sets a savepoint within a transaction.
+                    - ROLLBACK - rollbacks a transaction in case of any error occurs.
+                    - SAVEPOINT - sets a save point within a transaction.
                     - SET TRANSACTION - specify characteristics for the transaction.
             - Most used statements    
                 - SELECT

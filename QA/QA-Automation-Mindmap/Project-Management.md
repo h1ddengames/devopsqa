@@ -6,7 +6,7 @@
 - Agile Methodology/Manifesto is a set of core values and beliefs that can be applied towards software development. In this manifesto we need to value the elements in the column on the left rather than the right:
     | Left                          | Right                         |
     | -----                         | -----                         |
-    | Individual and interactions   | Processes and tools           |
+    | Individuals and interactions   | Processes and tools           |
     | Working software              | Comprehensive documentation   |
     | Customer collaboration        | Contract negotiation          |
     | Responding to change          | Following a plan              |
@@ -71,16 +71,17 @@
     4. Implementation / Programming
     5. Testing
     6. Deployment
-    7. Maintainence
+    7. Maintenance
 
 OR 
+
 - It can also look like this:
     1. Requirements Phase
     2. Analysis Phase
     3. Design Phase
     4. Development Phase
     5. Testing Phase
-    6. Deployment and Maintainence Phase
+    6. Deployment and Maintenance Phase
 
 - At each point in the process, there are deliverables that will be outlined below:
 
@@ -122,14 +123,14 @@ OR
     - Database Relationships
     - System Architecture
     - Supported Browsers
-- <b> Design Phase Ends. A High Level Design (gives the architecture of the product) will be delivered by the architects and senior developers. A Low Level Design (describes how each and every feature in the product should work) will be delievered by senior developers. </b>
+- <b> Design Phase Ends. A High Level Design (gives the architecture of the product) will be delivered by the architects and senior developers. A Low Level Design (describes how each and every feature in the product should work) will be delivered by senior developers. </b>
 - <b> Implementation/Programming Phase Starts </b>
   - Operations will setup hardware/software.
   - Developers will start writing the code.
   - The designers will plan the user interface.
   - The testers will analyze the requirements and start creating test plans and test cases.
     - Imagine the usability of the application and see how it flows.
-    - Help the desiners redesign around fundamental flaws in the application.
+    - Help the designers redesign around fundamental flaws in the application.
 - <b> Implementation/Programming Phase Ends. Software developers will deliver Source Code Document and the developed product. </b>
 - <b> Testing Phase Starts </b>
   - The developers have finished coding the core application with some features.
@@ -139,12 +140,12 @@ OR
   - Find as many bugs as possible such as user interface bugs, color scheme is incorrect, unable to login or register.
   - Bugs need to be reported into a bug tracking system.
   - Then the bugs need to be assigned to a developer.
-- <b> Testing Phase Ends. QA (Quality Assurance) will deliever the Quality Product and Testing Artifacts. </b>
+- <b> Testing Phase Ends. QA (Quality Assurance) will deliver the Quality Product and Testing Artifacts. </b>
 - <b> Deployment Phase Starts </b>
   - Operations team will create the production environment from the staging environment.
   - The application will then go live.
-- <b> Deployment Phase Ends. The application is delievered to the customer. Maintainence will be done as per the Service Level Agreement described in the contract. </b>
-- <b> Maintainence Phase Starts </b>
+- <b> Deployment Phase Ends. The application is delivered to the customer. Maintenance will be done as per the Service Level Agreement described in the contract. </b>
+- <b> Maintenance Phase Starts </b>
   - Users are logging in, registering, using the application.
   - The servers need to be monitored for stress/load.
   - Bugs will be found in production.
@@ -164,7 +165,7 @@ OR
     5. Test Execution
     6. Test Closure
    
-- Each key point has a definite entry and exit criteria (delieverables)
+- Each key point has a definite entry and exit criteria (deliverables)
 
 - <b> Requirement Analysis Phase Starts. </b>
     - Entry criteria is a Business Requirement Specification (name depends on the organization but here is another name for it: business requirements document)
@@ -250,7 +251,7 @@ OR
                         ```
                     - Commit the changes made so far
                         ```
-                        git commit -m "This should be a REALLY short summary of changes" -m "This should be a larger more detailed explination of what changes have been made and why"
+                        git commit -m "This should be a REALLY short summary of changes" -m "This should be a larger more detailed explanation of what changes have been made and why"
                         ```
                 - Uploading Changes:
                     - Push the changes to the remote repository

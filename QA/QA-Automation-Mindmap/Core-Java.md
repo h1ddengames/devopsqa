@@ -251,8 +251,8 @@ Four core OOP concepts:
 
     #
     #### Inheritance
-    - Inheritance is one of the "big four" pillar of OOP (Object Oriented Programming). 
-    - Inheritance allows one class to acquires the properties (methods and fields) of another class. 
+    - Inheritance is one of the "big four" pillars of OOP (Object Oriented Programming). 
+    - Inheritance allows one class to acquire the properties (methods and fields) of another class. 
     - Inheritance defines an "is-a" relationship. 
         - "Dog is an Animal" But not all animals are dogs. (Only one directional is-a relationship)
         - "Animal is the superclass of the Dog subclass"
@@ -280,7 +280,7 @@ Four core OOP concepts:
 
     - Super keyword
         - Used to differentiate the members of the superclass from the members of the subclass
-        - Used to invoke the superclass constructor from the subclass.
+        - Used to invoke the superclass' constructor from the subclass.
         ```
         super.variableName
         super.methodName()
@@ -422,7 +422,7 @@ Four core OOP concepts:
         }
 
         public void setName(String newName) {
-        name = newName;
+            name = newName;
         }
         ```
 
@@ -438,7 +438,7 @@ Four core OOP concepts:
 
             <br>
 
-            | Access Modifier | Access in Class | Access in Package | Access in Subclass | Global      |
+            | Access Modifier | Access in Class is | Access in Package is | Access in Subclass is | Access in Global is       |
             |-----------------|-----------------|-------------------|--------------------|-------------|
             | Public          | Allowed         | Allowed           | Allowed            | Allowed     |
             | Protected       | Allowed         | Allowed           | Allowed            | Not Allowed |
@@ -455,9 +455,9 @@ Four core OOP concepts:
 
         #
         #### Packages
-        - A package in Java is used to group related classes. 
+        - A package in Java is used to group related classes together. 
         - Think of it as a folder in a file directory. 
-        - We use packages to avoid name conflicts, and to write a better maintainable code.
+        - We use packages to avoid name conflicts, and to write better maintainable code.
 
         - Packages are divided into two categories:
             - Built-in Packages (packages from the Java API)
@@ -478,11 +478,11 @@ Four core OOP concepts:
 
 - Use interfaces to:
     - Achieve total abstraction.
-    - Achieve multiple inheritance
-    - Achieve loose coupling.
+    - Achieve multiple inheritance.
+    - Achieve loose coupling between classes.
 ```
 interface Animal {
-    int numberOfFeet = 0; // THIS VALUE IS PUBLIC STATIC AND FINAL. (Visable to the world, belongs to the interface/class, and cannot be changed.)
+    int numberOfFeet = 0; // THIS VALUE IS PUBLIC STATIC AND FINAL. (Visible to the world, belongs to the interface/class, and cannot be changed.)
 
     public void animalSound(); // interface method (does not have a body)
     public void sleep(); // interface method (does not have a body)
@@ -603,7 +603,7 @@ class Pig implements Animal {
         ```
     #
     #### Throw
-    - Throw keyword is used in the method body to throw an exception, while throws is used in method signature to declare the exceptions that can occur in the statements present in the method.
+    - Throw keyword is used in the method body to throw an exception, while throw is used in a method signature to declare the exceptions that can occur in the statements present in the method.
 
     ```
     void checkAge(int age){  
@@ -627,16 +627,16 @@ class Pig implements Animal {
 
     public void deposit(double amount) throws RemoteException {
         // Method implementation
+        // if something unwanted or unexpected happens throw an exception:
         throw new RemoteException();
-    }
-        // Remainder of class definition
     }
 
     public void withdraw(double amount) throws RemoteException, InsufficientFundsException {
         // Method implementation
         throw new RemoteException();
     }
-        // Remainder of class definition
+    
+    // Remainder of class definition
     }
     ```
 
@@ -652,16 +652,18 @@ class Pig implements Animal {
     } 
     ```
 
-- When final is used with non-primitive variables (Note that non-primitive variables are always references to objects in Java), the members of the referred object can be changed. final for non-primitive variables just mean that they cannot be changed to refer to any other object. 
+- When final is used with non-primitive variables (Note that non-primitive variables are always references to objects in Java), the members of the referred object can be changed. Final for non-primitive variables just mean that they cannot be changed to refer to any other object. 
     ```
     class Test1 { 
-        int i = 10; 
+        int i = 10; // Notice how this value has not been marked as final.
     } 
     
     public class Test2 { 
         public static void main(String args[]) { 
-        final Test1 t1 = new Test1(); 
-        t1.i = 30;  // Works 
+        final Test1 t1 = new Test1(); // Now that the value has been assigned, it cannot be changed anymore.
+        t1.i = 30;  // Works because the variable labeled 'i' has not been marked as final.
+
+        t1 = new Test1(); // DOES NOT WORK because the value of t1 has already been assigned to and it is marked as final.
         } 
     } 
     ```
@@ -752,14 +754,31 @@ class Pig implements Animal {
         public class AnotherClass {
             int f = StaticExample.i; // f now equals 1.
         } 
+
+        - How updates propagate to all objects of the same type
+        public class YetAnotherClass {
+            public static void main(String[] args) {
+                StaticExample a = new StaticExample();
+                StaticExample b = new StaticExample();
+                StaticExample c = new StaticExample();
+                StaticExample d = new StaticExample();
+                .
+                .
+                .
+                StaticExample z = new StaticExample();
+
+                a.i = 32; // Now objects a through z all have i = 32.
+                z.i = 19; // Now objects a through z all have i = 19.
+            }
+        }
         ```
 
     - Static Method
         - Creating
         ```
         public class StaticExample {
-            public static add(int first, int second) {
-                // some logic here.
+            public static int add(int first, int second) {
+                return first + second;
             } 
         }
         ```
@@ -772,7 +791,7 @@ class Pig implements Animal {
         ```
 
     - Static Block 
-        - This code inside static block is executed only once: the first time you make an object of that class or the first time you access a static member of that class (even if you never make an object of that class).
+        - The code inside static block is executed only once: the first time you make an object of that class or the first time you access a static member of that class (even if you never make an object of that class).
         ```
             class StaticExample {
                 static int i;
@@ -788,12 +807,27 @@ class Pig implements Animal {
 #
 #### Overloading
 - Method Overloading is a feature that allows a class to have more than one method having the same name, if their argument lists are different.
+- The reason to do this is for code reuse
 
 ```
-add(int, int)
-add(int, int, int)
+// These are all within the same class.
+add(int a, int b)
+add(int a , int b, int c)
 add(char, int, int) 
 add(int, int, char) // Different order of parameters is ok too
+```
+
+```
+// Code reuse example:
+public class AddNumbers {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int add(int a, int b, int c) {
+        return add(add(a, b), c);
+    }
+}
 ```
 
 #
@@ -806,6 +840,7 @@ add(int, int, char) // Different order of parameters is ok too
     public class MyClass {
         int x;
 
+        // Default constructor since it has no parameters (nothing between the parenthesis)
         public MyClass() {
             x = 0;
         }
@@ -816,6 +851,7 @@ add(int, int, char) // Different order of parameters is ok too
     public class MyClass {
         int x;
 
+        // Parameterized constructor since it has parameters (something between the parenthesis)
         public MyClass(int y) {
             x = y;
         }
@@ -826,14 +862,17 @@ add(int, int, char) // Different order of parameters is ok too
     ```
         // Constructor called.
         1. MyObject object = new MyObject();
+
         // Requires knowledge of a class name and if that class has a public constructor. - Constructor Called.
-        1. MyObject object = (MyObject) Class.forName("package.name.MyObject").newInstance();
+        2. MyObject object = (MyObject) Class.forName("package.name.MyObject").newInstance();
+
         // Object Cloning - No Constructor Called.
-        1. MyObject anotherObject = myObject();
-            MyObject object = (MyObject) anotherObject.clone();
+        3. MyObject anotherObject = new myObject();
+           MyObject object = (MyObject) anotherObject.clone();
+
         // Object Deserialization - No Constructor Called.
-        1. ObjectInputStream in = new ObjectInputStream(new FileInputStream("data.obj"));
-            Employee emp5 = (Employee) in.readObject();
+        4. ObjectInputStream in = new ObjectInputStream(new FileInputStream("data.obj"));
+           Employee emp5 = (Employee) in.readObject();
     ```
 
 #
@@ -907,14 +946,14 @@ add(int, int, char) // Different order of parameters is ok too
         public static void main (String[] args)  
         { 
             Bank bank = new Bank("Axis"); 
-            Employee emp = new Employee("Neha"); 
+            Employee emp = new Employee("Shahid"); 
             
             System.out.println(emp.getEmployeeName() +  
                 " is employee of " + bank.getBankName()); 
         } 
     } 
 
-    // Output: Neha is employee of Axis
+    // Output: Shahid is employee of Axis
     ```
 
 #
