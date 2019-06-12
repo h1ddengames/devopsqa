@@ -16,3 +16,5 @@ sudo chmod +x /usr/local/bin/docker-compose
 echo -e '\e[41;37m'"\033[1m Finished installing docker and docker-compose. \033[0m"
 cd /home/vagrant/docker/ && sudo docker-compose up -d
 echo -e '\e[41;37m'"\033[1m Finished running docker-compose \033[0m"
+echo -e '\e[41;37m'"\033[1m ip addr: \033[0m"
+ip addr | grep "inet "

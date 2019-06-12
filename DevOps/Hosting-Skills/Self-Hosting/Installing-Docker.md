@@ -14,7 +14,7 @@ Note: I have included a script to complete all the tasks below. Please change an
 
 Note: I am using Vagrant to create a VM so my user is vagrant and my home is located in /home/vagrant. If yours is different, make sure you update the script below to your environment.
 
-Note: You should have the Vagrantfile, setup-docker-compose.sh, and docker-compose.yaml in the same folder.
+Note: You should have the Vagrantfile, setup-docker-compose.s h, and docker-compose.yaml in the same folder.
 
 ```Vagrantfile:```
 ```
@@ -24,7 +24,8 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 80, host: 80
   config.vm.network "forwarded_port", guest: 3306, host: 3306
   config.vm.network "forwarded_port", guest: 8080, host: 8080
-
+  config.vm.network "public_network"
+  
   config.vm.provider "virtualbox" do |vb|
     vb.name = "Ubuntu Master"
     vb.gui = false
@@ -66,6 +67,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 echo -e '\e[41;37m'"\033[1m Finished installing docker and docker-compose. \033[0m"
 cd /home/vagrant/docker/ && sudo docker-compose up -d
 echo -e '\e[41;37m'"\033[1m Finished running docker-compose \033[0m"
+echo -e '\e[41;37m'"\033[1m ip addr: \033[0m"
+ip addr | grep "inet "
 ```
 
 ```docker-compose.yml```
@@ -90,6 +93,8 @@ services:
     volumes:
       - db_data:/var/lib/mysql
     restart: always
+    ports:
+      - '3306:3306'
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: database
@@ -220,6 +225,40 @@ volumes:
     ```
 
 #
+### Allowing MySQL to be accessed through JDBC driver
+0. First make sure you have these lines in the docker-compose.yaml file under db:
+    ```
+    ports:
+      - '3306:3306'
+    ```
+    If the above doesn't allow you to remotely access the mysql server using Java then do the steps below.
+1. Log into the docker container running mysql:
+    ```
+    sudo docker exec -it [containernameorID] /bin/bash
+    ```
+2. Open /etc/mysql/mysql.conf.d/mysqld.cnf for editing:
+    ```
+    apt-get update
+    apt-get install nano
+    nano /etc/mysql/mysql.conf.d/mysqld.cnf
+    ```
+3. Uncomment bind-address = 0.0.0.0
+4. Restart the mysql service
+    ```
+    service mysql restart
+    ```
+5. If the steps above have not worked then log into the container again and run the following commands:
+    ```
+    mysql -u root -p
+
+    GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
+
+    GRANT ALL PRIVILEGES ON *.* TO 'database-tester'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
+
+    FLUSH PRIVILEGES;
+    ```
+6. Restart the service
+#
 ### Using Docker Compose
 1. Create a directory to hold the docker-compose.yaml file.
     ```
@@ -231,47 +270,49 @@ volumes:
     version: '3'
 
     services:
-        # apache2
-        www:
-            image: httpd:2.4
-            ports: 
-            - "80:80"
-            volumes:
-            - ./www:/var/www/html/
-            links:
-            - db
-            networks:
-            - dbphp
-        # mysql database
-        db:
-            image: mysql:5.7
-            volumes:
-            - db_data:/var/lib/mysql
-            restart: always
-            environment:
-                MYSQL_ROOT_PASSWORD: password
-                MYSQL_DATABASE: database
-                MYSQL_USER: database-tester
-                MYSQL_PASSWORD: password
-            networks:
-            - dbphp
-        # phpmyadmin
-        phpmyadmin:
-            depends_on:
-            - db
-            image: phpmyadmin/phpmyadmin
-            restart: always
-            ports:
-            - '8080:80'
-            environment:
-                PMA_HOST: db
-                MYSQL_ROOT_PASSWORD: password 
-                networks:
-                - dbphp
-        networks:
-            dbphp:
+      # apache2
+      www:
+        image: httpd:2.4
+        ports: 
+          - "80:80"
         volumes:
-            db_data:
+          - ./www:/var/www/html/
+        links:
+          - db
+        networks:
+          - dbphp
+      # mysql database
+      db:
+        image: mysql:5.7
+        volumes:
+          - db_data:/var/lib/mysql
+        restart: always
+        ports:
+          - '3306:3306'
+        environment:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: database
+          MYSQL_USER: database-tester
+          MYSQL_PASSWORD: password
+        networks:
+          - dbphp
+      # phpmyadmin
+      phpmyadmin:
+        depends_on:
+          - db
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        ports:
+          - '8080:80'
+        environment:
+          PMA_HOST: db
+          MYSQL_ROOT_PASSWORD: password 
+        networks:
+          - dbphp
+    networks:
+      dbphp:
+    volumes:
+      db_data:
     ```
 3. Run Docker Compose:
     ```
