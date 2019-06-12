@@ -1,0 +1,302 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Quick and Easy FAQs\n"
+"POT-Creation-Date: 2019-04-04 18:28+0500\n"
+"PO-Revision-Date: 2019-04-04 18:30+0500\n"
+"Last-Translator: M Saqib Sarwar <saqib@inspirythemes.com>\n"
+"Language-Team: M Saqib Sarwar <saqib@inspirythemes.com>\n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: quick-and-easy-faqs.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#. Plugin Name of the plugin/theme
+#: includes/class-faqs-gutenberg-editor.php:31
+#: includes/class-faqs-shortcode.php:435
+msgid "Quick and Easy FAQs"
+msgstr ""
+
+#: includes/class-faqs-post-type.php:31
+msgctxt "Post Type General Name"
+msgid "FAQs"
+msgstr "FAQ"
+
+#: includes/class-faqs-post-type.php:32
+msgctxt "Post Type Singular Name"
+msgid "FAQ"
+msgstr "FAQ"
+
+#: includes/class-faqs-post-type.php:33 includes/class-faqs-post-type.php:36
+msgid "FAQs"
+msgstr "FAQ"
+
+#: includes/class-faqs-post-type.php:34
+msgid "FAQ"
+msgstr "FAQ"
+
+#: includes/class-faqs-post-type.php:35
+msgid "Parent FAQ:"
+msgstr "Parent FAQ:"
+
+#: includes/class-faqs-post-type.php:37
+msgid "Add New FAQ"
+msgstr "Aggiungi nuova FAQ"
+
+#: includes/class-faqs-post-type.php:38
+msgid "Add New"
+msgstr "Aggiungi Nuovo"
+
+#: includes/class-faqs-post-type.php:39
+msgid "New FAQ"
+msgstr "Nuova FAQ"
+
+#: includes/class-faqs-post-type.php:40
+msgid "Edit FAQ"
+msgstr "Modifica FAQ"
+
+#: includes/class-faqs-post-type.php:41
+msgid "Update FAQ"
+msgstr "Aggiorna FAQ"
+
+#: includes/class-faqs-post-type.php:42
+msgid "View FAQ"
+msgstr "Visualizza FAQ"
+
+#: includes/class-faqs-post-type.php:43
+msgid "Search FAQ"
+msgstr "Cerca FAQ"
+
+#: includes/class-faqs-post-type.php:44
+msgid "Not found"
+msgstr "Non trovato"
+
+#: includes/class-faqs-post-type.php:45
+msgid "Not found in Trash"
+msgstr "Non trovato nel cestino"
+
+#: includes/class-faqs-post-type.php:49
+msgid "faq"
+msgstr "faq"
+
+#: includes/class-faqs-post-type.php:50
+msgid "Frequently Asked Questions"
+msgstr "Domande frequenti"
+
+#: includes/class-faqs-post-type.php:68
+msgid "faqs"
+msgstr "faqs"
+
+#: includes/class-faqs-post-type.php:81
+msgctxt "Taxonomy General Name"
+msgid "FAQ Groups"
+msgstr "Gruppi FAQ"
+
+#: includes/class-faqs-post-type.php:82
+msgctxt "Taxonomy Singular Name"
+msgid "FAQ Group"
+msgstr "Gruppo FAQ"
+
+#: includes/class-faqs-post-type.php:83
+msgid "Groups"
+msgstr "Gruppi"
+
+#: includes/class-faqs-post-type.php:84
+msgid "All FAQ Groups"
+msgstr ""
+
+#: includes/class-faqs-post-type.php:85
+msgid "Parent FAQ Group"
+msgstr "Parent FAQ Group"
+
+#: includes/class-faqs-post-type.php:86
+msgid "Parent FAQ Group:"
+msgstr "Parent FAQ Group:"
+
+#: includes/class-faqs-post-type.php:87
+msgid "New FAQ Group Name"
+msgstr ""
+
+#: includes/class-faqs-post-type.php:88
+msgid "Add New FAQ Group"
+msgstr "Aggiungi nuovo gruppo di FAQ"
+
+#: includes/class-faqs-post-type.php:89
+msgid "Edit FAQ Group"
+msgstr "Modifica gruppo FAQ"
+
+#: includes/class-faqs-post-type.php:90
+msgid "Update FAQ Group"
+msgstr ""
+
+#: includes/class-faqs-post-type.php:91
+msgid "View FAQ Group"
+msgstr ""
+
+#: includes/class-faqs-post-type.php:92
+msgid "Separate FAQ Groups with commas"
+msgstr "Separa i gruppi con le virgole"
+
+#: includes/class-faqs-post-type.php:93
+msgid "Add or remove FAQ Groups"
+msgstr "Aggiungi o rimuovi gruppo FAQ"
+
+#: includes/class-faqs-post-type.php:94
+msgid "Choose from the most used"
+msgstr "Scegli tra le più usate"
+
+#: includes/class-faqs-post-type.php:95
+msgid "Popular FAQ Groups"
+msgstr "Gruppi popolari FAQ"
+
+#: includes/class-faqs-post-type.php:96
+msgid "Search FAQ Groups"
+msgstr "Cerca Gruppi FAQ"
+
+#: includes/class-faqs-post-type.php:97
+msgid "Not Found"
+msgstr "Non trovato"
+
+#: includes/class-faqs-post-type.php:112
+#| msgid "Groups"
+msgid "faq_groups"
+msgstr ""
+
+#: includes/class-faqs-settings.php:49
+msgid "Quick & Easy Settings"
+msgstr "Impostazioni"
+
+#: includes/class-faqs-settings.php:50 includes/class-faqs-settings.php:290
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: includes/class-faqs-settings.php:67
+msgid "Quick and Easy FAQs Settings"
+msgstr "Quick and Easy FAQs Settings"
+
+#: includes/class-faqs-settings.php:98
+msgid "FAQs Toggle Styles"
+msgstr ""
+
+#: includes/class-faqs-settings.php:105
+msgid "FAQs Common Styles"
+msgstr "Stili comuni FAQ"
+
+#: includes/class-faqs-settings.php:115
+msgid "FAQs toggle colors"
+msgstr "Seleziona i colori FAQ"
+
+#: includes/class-faqs-settings.php:122
+msgid "Choose custom colors to apply colors provided in options below."
+msgstr ""
+
+#: includes/class-faqs-settings.php:124
+msgid "Default Colors"
+msgstr ""
+
+#: includes/class-faqs-settings.php:125
+msgid "Custom Colors"
+msgstr "Colori personalizzati"
+
+#: includes/class-faqs-settings.php:131
+msgid "Question text color"
+msgstr "Colore del testo domanda"
+
+#: includes/class-faqs-settings.php:142
+msgid "Question text color on mouse over"
+msgstr ""
+
+#: includes/class-faqs-settings.php:153
+msgid "Question background color"
+msgstr "Colore di sfondo di domanda"
+
+#: includes/class-faqs-settings.php:164
+msgid "Question background color on mouse over"
+msgstr "Colore di sfondo di domanda sul mouse sopra"
+
+#: includes/class-faqs-settings.php:175
+msgid "Answer text color"
+msgstr ""
+
+#: includes/class-faqs-settings.php:186
+msgid "Answer background color"
+msgstr "Colore di sfondo risposta"
+
+#: includes/class-faqs-settings.php:197
+msgid "Toggle Border color"
+msgstr ""
+
+#: includes/class-faqs-settings.php:208
+msgid "Custom CSS"
+msgstr "CSS personalizzato"
+
+#: includes/class-faqs-settings.php:227
+msgid ""
+"These settings only applies to FAQs with toggle style. As FAQs with list "
+"style use colors inherited from currently active theme."
+msgstr ""
+"These settings only applies to FAQs with toggle style. As FAQs with list "
+"style use colors inherited from currently active theme."
+
+#: includes/class-faqs-settings.php:248 includes/class-faqs-settings.php:261
+#: includes/class-faqs-settings.php:282
+msgid "Field id is missing!"
+msgstr "Il campo Codice Immobile mancante!"
+
+#: includes/class-faqs-shortcode.php:155 includes/class-faqs-shortcode.php:234
+msgid "Back to Index"
+msgstr "Torna all’indice"
+
+#: includes/class-faqs-shortcode.php:357
+msgid "All"
+msgstr "Tutti"
+
+#: includes/class-faqs-shortcode.php:436
+msgid "Quick and Easy FAQs Plugin"
+msgstr "Quick and Easy FAQs Plugin"
+
+#: includes/class-faqs-shortcode.php:438
+msgid "Content"
+msgstr "Contenuto"
+
+#: includes/class-faqs-shortcode.php:442
+msgid "Display Style"
+msgstr "Stile di visualizzazione"
+
+#: includes/class-faqs-shortcode.php:453
+msgid "Display FAQs in Groups"
+msgstr "Visualizzare le domande frequenti in gruppi"
+
+#: includes/class-faqs-shortcode.php:456
+msgid "Yes"
+msgstr "Sì"
+
+#: includes/class-faqs-shortcode.php:457
+msgid "No"
+msgstr "No"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/inspirythemes/quick-and-easy-faqs"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "A quick and easy way to add FAQs to your site."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Inspiry Themes"
+msgstr "Inspiry Themes"
+
+#. Author URI of the plugin/theme
+msgid "https://inspirythemes.com/"
+msgstr ""

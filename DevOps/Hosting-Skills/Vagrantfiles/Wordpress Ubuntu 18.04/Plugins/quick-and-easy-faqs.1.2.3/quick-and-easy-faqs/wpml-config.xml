@@ -1,0 +1,8 @@
+<wpml-config>
+    <custom-types>
+        <custom-type translate="1">faq</custom-type>
+    </custom-types>
+    <taxonomies>
+        <taxonomy translate="1">faq-group</taxonomy>
+    </taxonomies>
+</wpml-config>

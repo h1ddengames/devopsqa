@@ -290,7 +290,7 @@ code. Tests are based on coverage of code statements, branches, paths and condit
 
 #
 #### Incremental Integration Testing
-- Incremental Integration Testing is continuous testing of an application when a new functionality is added. Application functionality and modules should be independent enough to test separately.
+- Incremental Integration Testing is continuous testing of an application when new functionality is added. Application functionality and modules should be independent enough to test separately.
 
 #
 #### System Testing
@@ -298,25 +298,21 @@ code. Tests are based on coverage of code statements, branches, paths and condit
 
 #
 #### Acceptance Testing / UAT (User Acceptance Testing)
-- An acceptance test is performed by the client and verifies whether the end to end the flow of the system is as per the business requirements or not and if it is as per the needs of the end user. Client accepts the software only when all the features and functionalities work as expected.
+- An acceptance test is performed by the client and verifies whether the end to end flow of the system is as per the business requirements and if it is as per the needs of the end user. Client accepts the software only when all the features and functionalities work as expected.
 
 - It is the last phase of the testing, after which the software goes into production. This is also called User Acceptance Testing (UAT).
 
 #
 #### End-to-end Testing
-- Similar to system testing, the macro end of the test scale is testing a complete
-application in a situation that mimics real world use, such as interacting with a database,
-using network communication, or interacting with other hardware, application, or system.
+- Similar to system testing, the macro end of the test scale is testing a complete application in a situation that mimics real world use, such as interacting with a database, using network communication, or interacting with other hardware, application, or system.
 
 #
 #### Sanity Testing
-- Sanity Testing is done to determine if a new software version is performing well enough to accept it for a major testing effort or not.
+- Sanity Testing is done to determine if a new software version is performing well enough to accept it for a major testing effort.
 
 #
 #### Smoke Testing
-- Smoke testing is performed whenever cursory testing is sufficient to prove the
-application is functioning according to specifications. This level of testing is a subset of
-regression testing.
+- Smoke testing is performed whenever cursory testing is sufficient to prove the application is functioning according to specifications. This level of testing is a subset of regression testing.
 
 #
 #### Regression Testing
@@ -324,61 +320,43 @@ regression testing.
 
 #
 #### Alpha Testing
-- Alpha testing is testing of an application when developments is nearing completion.
-Minor design changes can still be made as a result of alpha testing. Alpha testing is
-typically performed by a group that is independent of the design team, but still within the
-company, e.g. in-house software test engineers, or software QA engineers.
+- Alpha testing is testing of an application when developments is nearing completion. Minor design changes can still be made as a result of alpha testing. Alpha testing is typically performed by a group that is independent of the design team, but still within the company, e.g. in-house software test engineers, or software QA engineers.
 
 #
 #### Beta Testing
-- Beta testing is testing an application when development and testing are essentially
-completed and final bugs and problems need to be found before the final release. Beta
-testing is typically performed by end-users or others, not programmers, software
-engineers, or test engineers.
+- Beta testing is testing an application when development and testing are essentially completed and final bugs and problems need to be found before the final release. Beta testing is typically performed by end-users or others, not programmers, software engineers, or test engineers.
 
 #
 #### Performance Testing
-- Performance testing is described as a part of system testing, it can be
-regarded as a distinct level of testing. Performance testing verifies loads, volumes and
-response times, as defined by requirements.
+- Performance testing is described as a part of system testing, it can be regarded as a distinct level of testing. Performance testing verifies loads, volumes and response times, as defined by requirements.
 
 #
 #### Load Testing
-- Load testing is testing an application under heavy loads, such as the testing of a web
-site under a range of loads to determine at what point the system response time will
-degrade or fail.
+- Load testing is testing an application under heavy loads, such as the testing of a web site under a range of loads to determine at what point the system's response time will degrade or fail.
 
 #
 #### Installation Testing
-- Installation testing is testing full, partial, upgrade, or install/uninstall processes. The
-installation test for a release is conducted with the objective of demonstrating production
-readiness.
+- Installation testing is testing full, partial, upgrade, or install/uninstall processes. The installation test for a release is conducted with the objective of demonstrating production readiness.
 
 #
 #### Compatibility Testing
-- Compatibility testing is testing how well software performs in a particular hardware,
-software, operation system, or network.
+- Compatibility testing is testing how well software performs on particular hardware, software, operation system, or network.
 
 #
 #### Comparison Testing 
-- Comparison testing is testing that compares software weaknesses and strengths to
-those of competitors’ products.
+- Comparison testing is testing that compares software weaknesses and strengths to those of competitors’ products.
 
 #
 #### Recovery Testing
-- Recovery/error testing is testing how well a system recovers from crashes, hardware
-failures, or other catastrophic problems.
+- Recovery/error testing is testing how well a system recovers from crashes, hardware failures, or other catastrophic problems.
 
 #
 #### Security Testing / Penetration Testing / Vulnerability Testing
-- Security/penetration testing is testing how well the system is protected against
-unauthorized internal or external access, or willful damage.
+- Security/penetration testing is testing how well the system is protected against unauthorized internal or external access, or willful damage.
 
 #
 #### Parallel Testing / Audit Testing
-- Parallel/audit testing is testing where the user reconciles the output of the new system
-to the output of the current system to verify the new system performs the operations
-correctly.
+- Parallel/audit testing is testing where the user reconciles the output of the new system to the output of the current system to verify the new system performs the operations correctly.
 
 #
 #### Ad-hoc Testing
@@ -386,7 +364,4 @@ correctly.
 
 #
 #### Usability Testing
-- Usability testing is testing for ‘user-friendliness’. Clearly, this is subjective and
-depends on the targeted end-user or customer. User interviews, surveys, video recording
-of user sessions and other techniques can be used. Programmers and developers are
-usually not appropriate as usability testers.
+- Usability testing is testing for ‘user-friendliness’. Clearly, this is subjective and depends on the targeted end-user or customer. User interviews, surveys, video recording of user sessions and other techniques can be used. Programmers and developers are usually not appropriate as usability testers.

@@ -1,0 +1,226 @@
+.js .valmiki-metabox.postbox .hndle {
+	cursor: inherit;
+}
+
+.valmiki-metabox .clear {
+	padding-top: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #DDD;
+}
+
+.valmiki-metabox .clear:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.customize-button a.button,
+.customize-button a.button:visited {
+	font-size: 25px;
+	padding: 10px 20px;
+	line-height: normal;
+	height: auto;
+	width: 100%;
+	text-align: center;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.customize-button {
+	margin-bottom: 40px;
+}
+
+.addon-container:before,
+.addon-container:after {
+	content: ".";
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	font-size: 0;
+	line-height: 0;
+	width: 0;
+	height: 0;
+}
+.addon-container:after {
+	clear: both;
+}
+.premium-addons .valmiki-clear {
+	margin: 0 !important;
+	border: 0;
+	padding: 0 !important;
+}
+.premium-addons .add-on.valmiki-clear {
+	padding: 15px !important;
+	margin: 0 !important;
+	-moz-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+	-webkit-box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+	box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1) inset;
+}
+.premium-addons .add-on:last-child {
+	border: 0 !important;
+}
+.addon-action {
+	float: right;
+	clear: right;
+}
+.addon-name {
+	float: left;
+}
+
+.addon-name a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* New admin */
+.clearfix:after,
+.clearfix:before {
+  content: ".";
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.valmiki-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.valmiki-container a {
+	text-decoration: none;
+}
+
+.appearance_page_valmiki-options #wpcontent,
+.appearance_page_valmiki-options #wpbody-content .metabox-holder {
+	padding: 0;
+}
+
+.appearance_page_valmiki-options .wrap {
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.valmiki-masthead {
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 1px 0 rgba(200,215,225,0.5), 0 1px 2px #DDD;
+	margin-bottom: 40px;
+	padding: 20px;
+}
+
+.valmiki-container .postbox {
+	box-shadow: 0 0 0 1px rgba(200, 215, 225, 0.5), 0 1px 2px #DDD;
+	border: 0;
+	min-width: initial;
+	margin-bottom: 40px;
+}
+
+.valmiki-masthead .valmiki-title {
+	float: left;
+}
+
+.valmiki-masthead .valmiki-title a {
+	font-size: 20px;
+	color: #000;
+	font-weight: 500;
+}
+
+.valmiki-masthead .valmiki-masthead-links {
+	float: right;
+}
+
+.valmiki-masthead-links a {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.valmiki-masthead-links-bold {
+	font-weight: bold;
+}
+	
+.valmiki-masthead .valmiki-version {
+	display: inline-block;
+	background: #EFEFEF;
+	padding: 1px 3px;
+	border-radius: 2px;
+	font-size: 11px;
+	vertical-align: top;
+	margin-left: 5px;
+}
+
+.popular-articles ul {
+    list-style-type: disc;
+    margin-left: 20px;
+	margin-bottom: 0;
+}
+
+.popular-articles .hndle a {
+	float:right;
+	font-size:13px;
+}
+
+.wpkoi-admin-button {
+    display: inline-block;
+    background-color: #0073aa;
+    color: #fff;
+    margin: 10px 0;
+    padding: 10px 20px;
+}
+
+.wpkoi-admin-button:hover {
+    background-color: #00a0d2;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+	.hide-on-desktop {
+		display: none;
+	}
+
+	.grid-70 {
+		float: left;
+		width: 70%;
+		box-sizing: border-box;
+		padding-right: 20px;
+	}
+
+	.grid-30 {
+		float: left;
+		width: 30%;
+		box-sizing: border-box;
+		padding-left: 20px;
+	}
+
+	.grid-parent {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.hide-on-mobile {
+		display: none;
+	}
+	.valmiki-masthead .valmiki-masthead-links,
+	.valmiki-masthead .valmiki-title {
+		float: none;
+		text-align: center;
+	}
+	.valmiki-masthead .valmiki-title {
+		margin-bottom: 20px;
+	}
+}

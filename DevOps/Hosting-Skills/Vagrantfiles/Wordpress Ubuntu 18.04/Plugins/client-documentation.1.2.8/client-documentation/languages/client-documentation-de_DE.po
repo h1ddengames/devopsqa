@@ -1,0 +1,422 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Simple Documentation v1.2 beta\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-04-24 21:14:19+0000\n"
+"Last-Translator: Alexander Pfabel <localization@pfabel.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#. translators: plugin header field 'Name'
+#: client-documentation.php:0
+#: views/list-add-edit.inc.php:11
+#@ client-documentation
+msgid "Simple Documentation"
+msgstr ""
+
+#. translators: plugin header field 'PluginURI'
+#: client-documentation.php:0
+#@ client-documentation
+msgid "http://mathieuhays.co.uk/simple-documentation/"
+msgstr ""
+
+#. translators: plugin header field 'Description'
+#: client-documentation.php:0
+#@ client-documentation
+msgid "This plugin helps webmasters/developers to provide documentation through the wordpress dashboard."
+msgstr "Dieses Plugin hilft Webmastern / Entwicklern eine Dokumentation im Wordpress-Dashboard zur Verfügung zu stellen."
+
+#. translators: plugin header field 'Author'
+#: client-documentation.php:0
+#@ client-documentation
+msgid "Mathieu Hays"
+msgstr ""
+
+#. translators: plugin header field 'AuthorURI'
+#: client-documentation.php:0
+#@ client-documentation
+msgid "http://mathieuhays.co.uk"
+msgstr ""
+
+#. translators: plugin header field 'Version'
+#: client-documentation.php:0
+#@ client-documentation
+msgid "1.2 beta"
+msgstr ""
+
+#: client-documentation.php:118
+#@ client-documentation
+msgid "Resources"
+msgstr "Handbuch"
+
+#: client-documentation.php:119
+#@ client-documentation
+msgid "Welcome"
+msgstr "Inhalt"
+
+#: client-documentation.php:120
+#@ client-documentation
+msgid "Need Help ? All you need is here !"
+msgstr "Wichtige Informationen zu WordPress!"
+
+#: client-documentation.php:250
+#@ client-documentation
+msgid "How to create your first post"
+msgstr "Wie du deinen ersten Beitrag erstellst"
+
+#: client-documentation.php:251
+#@ client-documentation
+msgid "Example of content"
+msgstr "Beispiel für Inhalte"
+
+#: client-documentation.php:333
+#@ client-documentation
+msgid "Following fields are missing :"
+msgstr "Es fehlen folgende Felder:"
+
+#: client-documentation.php:334
+#@ client-documentation
+msgid "is missing !"
+msgstr "fehlt!"
+
+#: client-documentation.php:336
+#@ client-documentation
+msgid "View List"
+msgstr "Ansichtsliste"
+
+#: client-documentation.php:337
+#@ client-documentation
+msgid "Order saved"
+msgstr "Reihenfolge gespeichert"
+
+#: client-documentation.php:338
+#@ client-documentation
+msgid "Loading"
+msgstr "Lädt"
+
+#: client-documentation.php:339
+#@ client-documentation
+msgid "Processing"
+msgstr "Läuft"
+
+#: client-documentation.php:340
+#@ client-documentation
+msgid "Done"
+msgstr "Fertig"
+
+#: client-documentation.php:341
+#@ client-documentation
+msgid "Error!"
+msgstr "Fehler!"
+
+#: client-documentation.php:342
+#@ client-documentation
+msgid "Add item"
+msgstr "Neue Inhalte hinzufügen"
+
+#: client-documentation.php:343
+#@ client-documentation
+msgid "Save changes"
+msgstr "Speichern"
+
+#: client-documentation.php:344
+#@ client-documentation
+msgid "Add new"
+msgstr "Neue Inhalte hinzufügen"
+
+#: client-documentation.php:382
+#: client-documentation.php:383
+#: views/import-export.inc.php:7
+#@ client-documentation
+msgid "Import / Export"
+msgstr "Import / Export"
+
+#: client-documentation.php:390
+#: client-documentation.php:391
+#: views/settings.inc.php:7
+#@ client-documentation
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: client-documentation.php:398
+#@ client-documentation
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: client-documentation.php:483
+#@ client-documentation
+msgid "Settings saved"
+msgstr "Optionen aktualisiert"
+
+#: client-documentation.php:574
+#@ client-documentation
+msgid "title"
+msgstr "Überschrift"
+
+#: client-documentation.php:582
+#@ client-documentation
+msgid "content"
+msgstr "Inhalt"
+
+#: client-documentation.php:588
+#@ client-documentation
+msgid "link"
+msgstr "Link"
+
+#: client-documentation.php:597
+#@ client-documentation
+msgid "file"
+msgstr "Datei"
+
+#: client-documentation.php:638
+#: views/list-add-edit.inc.php:59
+#: views/list-add-edit.inc.php:161
+#: views/settings.inc.php:37
+#: views/widget.inc.php:65
+#@ client-documentation
+#@ default
+msgid "name"
+msgstr "Name"
+
+#: client-documentation.php:731
+#@ client-documentation
+msgid "error"
+msgstr "Fehler"
+
+#: views/import-export.inc.php:9
+#: views/import-export.inc.php:14
+#@ client-documentation
+msgid "Export"
+msgstr "Export"
+
+#: views/import-export.inc.php:16
+#@ client-documentation
+msgid "Include options"
+msgstr "Mit Inhalten"
+
+#: views/import-export.inc.php:17
+#@ client-documentation
+msgid "if included, options will be overwritten"
+msgstr "Alle Inhalte werden dann überschrieben"
+
+#: views/import-export.inc.php:20
+#: views/import-export.inc.php:25
+#@ client-documentation
+msgid "Import"
+msgstr "Import"
+
+#: views/list-add-edit.inc.php:11
+#@ client-documentation
+msgid "Add New"
+msgstr "Neue Inhalte hinzufügen"
+
+#: views/list-add-edit.inc.php:18
+#@ client-documentation
+msgid "Documentation list"
+msgstr "Dokumentationsliste"
+
+#: views/list-add-edit.inc.php:47
+#@ client-documentation
+msgid "(default) "
+msgstr "(Standard) "
+
+#: views/list-add-edit.inc.php:91
+#@ client-documentation
+msgid "Add Content"
+msgstr "Neue Inhalte hinzufügen"
+
+#: views/list-add-edit.inc.php:96
+#@ client-documentation
+msgid "Video"
+msgstr "Video"
+
+#: views/list-add-edit.inc.php:100
+#@ client-documentation
+msgid "Note"
+msgstr "Notiz"
+
+#: views/list-add-edit.inc.php:104
+#: views/list-add-edit.inc.php:129
+#@ client-documentation
+msgid "Link"
+msgstr "Link"
+
+#: views/list-add-edit.inc.php:108
+#: views/list-add-edit.inc.php:133
+#@ client-documentation
+msgid "File"
+msgstr "Datei"
+
+#: views/list-add-edit.inc.php:117
+#@ client-documentation
+msgid "Title"
+msgstr "Überschrift"
+
+#: views/list-add-edit.inc.php:136
+#@ client-documentation
+msgid "Upload a file"
+msgstr "Datei hochladen"
+
+#: views/list-add-edit.inc.php:137
+#@ client-documentation
+msgid "Select a file"
+msgstr "Datei auswählen"
+
+#: views/list-add-edit.inc.php:142
+#@ client-documentation
+msgid "Limit to user roles"
+msgstr "Benutzerrolle"
+
+#: views/list-add-edit.inc.php:144
+#@ client-documentation
+msgid "Leave blank to use default"
+msgstr "Leer lassen, um Standard zu verwenden"
+
+#: views/list-add-edit.inc.php:145
+#@ client-documentation
+msgid "Current Defaults"
+msgstr "Aktueller Standard"
+
+#: views/list-add-edit.inc.php:181
+#@ client-documentation
+msgid "Information"
+msgstr "Informationen"
+
+#: views/list-add-edit.inc.php:183
+#@ client-documentation
+msgid "Welcome to Simple Documentation."
+msgstr "Willkommen zu Simple Documentation."
+
+#: views/list-add-edit.inc.php:185
+#@ client-documentation
+msgid "Update"
+msgstr "Update"
+
+#: views/list-add-edit.inc.php:186
+#@ client-documentation
+msgid "This new update comes with new features such as item re-ordering and restricting access per user."
+msgstr "Dieses Update kommt mit neuen Features wie Artikel-Sortierung und Zugriff nach Benutzername."
+
+#: views/list-add-edit.inc.php:188
+#@ client-documentation
+msgid "Contribution"
+msgstr "Beiträge"
+
+#: views/list-add-edit.inc.php:189
+#@ client-documentation
+msgid "Some good people I would like to thank, helped me with the translations"
+msgstr "Ich danke den großartigen Menschen, die mir bei den Übersetzungen geholfen haben"
+
+#: views/list-add-edit.inc.php:191
+#@ client-documentation
+msgid "Spanish translation by"
+msgstr "Spanische Übersetzung von"
+
+#: views/list-add-edit.inc.php:192
+#@ client-documentation
+msgid "German translation by"
+msgstr "Deutsche Übersetzung von"
+
+#: views/list-add-edit.inc.php:193
+#@ client-documentation
+msgid "Serbo-Croatian translation by"
+msgstr "Serbo-Kroatische Übersetzung von"
+
+#: views/list-add-edit.inc.php:195
+#@ client-documentation
+msgid "If you want to contribute, feel free to "
+msgstr "Fühl dich frei, wenn du dazu beitragen möchtest "
+
+#: views/list-add-edit.inc.php:195
+#@ client-documentation
+msgid "contact me"
+msgstr "kontaktiere mich"
+
+#: views/list-add-edit.inc.php:195
+#@ client-documentation
+msgid "or"
+msgstr "oder"
+
+#: views/list-add-edit.inc.php:195
+#@ client-documentation
+msgid "fork the project on github"
+msgstr "teile das Projekt auf GitHub"
+
+#: views/list-add-edit.inc.php:197
+#@ client-documentation
+msgid "Plugin created by"
+msgstr "Plugin erstellt von"
+
+#: views/list-add-edit.inc.php:197
+#@ client-documentation
+msgid "Report issues"
+msgstr "Melde Fehler"
+
+#: views/settings.inc.php:13
+#@ client-documentation
+msgid "As all fields are required, any empty field will keep its former value"
+msgstr "Da alle Felder Pflichtfelder sind, werden alle leeren Feld ihren früheren Wert übernehmen"
+
+#: views/settings.inc.php:19
+#@ client-documentation
+msgid "General"
+msgstr "Allgemein"
+
+#: views/settings.inc.php:23
+#@ client-documentation
+msgid "Number of items displayed per page"
+msgstr "Anzahl angezeigter Beiträge pro Seite"
+
+#: views/settings.inc.php:27
+#@ client-documentation
+msgid "Default client user role"
+msgstr "Standard-Benutzerrolle"
+
+#: views/settings.inc.php:45
+#@ client-documentation
+msgid "Custom titles & content"
+msgstr "Eigene Überschrift und Inhalt"
+
+#: views/settings.inc.php:51
+#@ client-documentation
+msgid "Widget Title"
+msgstr "Widget-Überschrift"
+
+#: views/settings.inc.php:52
+#@ client-documentation
+msgid "Welcome Title"
+msgstr "Willkommen-Überschrift"
+
+#: views/settings.inc.php:53
+#@ client-documentation
+msgid "Welcome Message"
+msgstr "Willkommen-Nachricht"
+
+#: views/settings.inc.php:83
+#@ client-documentation
+msgid "Save"
+msgstr "Speichern"
+
+#: views/widget.inc.php:95
+#@ client-documentation
+msgid "Pages"
+msgstr "Seiten"
+
+#: views/widget.inc.php:109
+#@ client-documentation
+msgid "No Documentation available yet."
+msgstr "Keine Dokumentation vorhanden."
+

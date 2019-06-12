@@ -1,0 +1,65 @@
+/**
+ * Less For FAQs Styles
+ */
+.qe-faq-content {
+  padding-top: 1px;
+}
+.qe-faq-content i.fa {
+  margin-right: 0.3em;
+}
+.qe-faq-content .qe-faq-top {
+  display: inline-block;
+  margin-bottom: 1em;
+}
+.qe-faq-toggle {
+  margin-bottom: 2px;
+  transition: all 0.5s;
+}
+.qe-faq-toggle .qe-toggle-title {
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  margin: 0;
+  height: auto;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 1em;
+}
+.qe-faq-toggle .qe-toggle-title i.fa {
+  margin-right: 0.5em;
+}
+.qe-faq-toggle.active .qe-toggle-title,
+.qe-faq-toggle .qe-toggle-title:hover {
+  background-color: #eaeaea;
+}
+.qe-faq-toggle .qe-toggle-content {
+  padding: 1.5em 1.5em 0.3em;
+  margin: 0;
+  border: 1px solid #ddd;
+  display: none;
+}
+.nojs.qe-faq-toggle .qe-toggle-content {
+  display: block;
+}
+.qe-faqs-filters-container {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em 0;
+}
+.qe-faqs-filters-container li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+.qe-faqs-filters-container li a {
+  display: inline-block;
+  border-bottom: 1px solid;
+  padding: 5px 10px;
+  margin: 0 10px 0 0;
+}
+.qe-faqs-filters-container li a:hover {
+  border-bottom: 2px solid;
+}
+.qe-faqs-filters-container li.active a {
+  border-bottom: 2px solid;
+  font-weight: bold;
+}

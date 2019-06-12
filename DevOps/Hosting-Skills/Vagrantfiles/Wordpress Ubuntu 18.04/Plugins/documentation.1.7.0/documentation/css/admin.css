@@ -1,0 +1,92 @@
+/**
+ * admin.css
+ *
+ * Copyright (c) 2013 "kento" Karim Rahimpur www.itthinx.com
+ *
+ * This code is released under the GNU General Public License.
+ * See COPYRIGHT.txt and LICENSE.txt.
+ *
+ * This code is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * This header and all notices must be kept intact.
+ *
+ * @author Karim Rahimpur
+ * @package documentation 1.0.0
+ * @since documentation 1.0.0
+ */
+.info {
+	background-color: #e0ffe0;
+	border: 1px solid #0c0;
+	border-radius: 4px;
+	padding: 1em;
+	margin: 1em;
+}
+.warning {
+	background-color: #ffffe0;
+	border: 1px solid #cc0;
+	border-radius: 4px;
+	padding: 1em;
+	margin: 1em;
+}
+.error {
+	background-color: #ffe0e0;
+	border: 1px solid #c00;
+	border-radius: 4px;
+	padding: 1em;
+	margin: 1em;
+}
+.documentation-settings-info {
+	margin: 1em 1em 0 0;
+	padding: 1em;
+	background-color: #a46497;
+	border-radius: 4px;
+	color: #fff;
+}
+.documentation-settings-info a {
+	color: #3c3c3c;
+	font-weight: bold;
+}
+.documentation-settings-info a:hover {
+	color: #1c1c1c;
+}
+.documentation-documentation-info {
+	margin: 1em 1em 0 0;
+	padding: 1em;
+	background-color: #fcfcff;
+	border-radius: 4px;
+	color: #111;
+}
+.documentation-settings .separator {
+	border-bottom: 1px solid #fcfcfc;
+	height: 0px;
+	margin: 0.6em 1em 0.6em 0;
+}
+.documentation-settings .separator.strong {
+	border-top: 1px solid #fcfcfc;
+	border-bottom: 1px solid #e0e0e0;
+	margin-top: 1em;
+}
+label.warning {
+	margin-bottom: 2em;
+}
+.notification {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 0 1em 1em 1em;
+	margin-bottom: 1em;
+	margin-right: 1em;
+	background-color: #eee;
+}
+.notification input[type="text"],
+.notification textarea {
+	width: 100%;
+}
+.notification textarea {
+	height: 8em;
+}
+.notification .defaults {
+	margin-top: 1em;
+}

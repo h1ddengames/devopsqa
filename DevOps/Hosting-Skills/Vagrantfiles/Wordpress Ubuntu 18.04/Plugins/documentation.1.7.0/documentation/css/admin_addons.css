@@ -1,0 +1,65 @@
+/**
+ * admin_addons.css
+ *
+ * Copyright (c) 2013 - 2017 "kento" Karim Rahimpur www.itthinx.com
+ *
+ * This code is released under the GNU General Public License.
+ * See COPYRIGHT.txt and LICENSE.txt.
+ *
+ * This code is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * This header and all notices must be kept intact.
+ *
+ * @author Karim Rahimpur
+ * @package documentation 1.0.0
+ * @since documentation 1.5.0
+ */
+.documentation-admin-add-ons {
+	margin: 10px 20px 0 2px;
+}
+.documentation-admin-add-ons ul {
+	list-style: none;
+	display: block;
+	padding: 0;
+	overflow: hidden;
+}
+.documentation-admin-add-ons li {
+	display: inline-block;
+	margin: 0 1em 1em 0;
+	padding: 8px;
+	vertical-align: top;
+	width: 256px;
+	min-height: 176px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+}
+.documentation-admin-add-ons .add-ons .add-ons-sub-sub-title {
+	margin: 0;
+	display: block;
+	clear: both;
+}
+.documentation-admin-add-ons .add-ons .add-ons-sub-sub-title span.title {
+	padding: 8px 0 8px 2px;
+	display: block;
+}
+.documentation-admin-add-ons .add-ons .add-ons-sub-sub-tile img {
+	vertical-align: middle;
+	margin: 0 8px 0 0;
+	display: block;
+	float: left;
+}
+.documentation-admin-add-ons .add-ons a {
+	text-decoration: none;
+	display: block;
+	overflow: hidden;
+}
+.documentation-admin-add-ons .add-ons p {
+	margin: 0;
+	padding-top: 8px;
+	clear: both;
+	display: block;
+	color: #333;
+}

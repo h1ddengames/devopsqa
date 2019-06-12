@@ -1,0 +1,25 @@
+#corpopress_sidebar_layout label{
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+#corpopress_sidebar_layout label input{
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#corpopress_sidebar_layout label img{
+    vertical-align: middle;
+    border: 2px solid transparent;
+}
+#corpopress_sidebar_layout img:hover,
+#corpopress_sidebar_layout img:focus {
+    border-color: #00a0d2;
+}
+#corpopress_sidebar_layout label input:checked + img{
+    border: 2px solid #00a0d2;
+}

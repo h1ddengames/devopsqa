@@ -1,0 +1,309 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Simple Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-23 18:36-0000\n"
+"PO-Revision-Date: 2015-06-03 17:51+0100\n"
+"Last-Translator: Gerhard Hoogterp <admin@funsite.eu>\n"
+"Language-Team: Mathieu HAYS <mathieu@mathieuhays.co.uk>\n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Loco-Target-Locale: nl_NL\n"
+"X-Poedit-SearchPath-0: /Library/WebServer/Documents/wp/wp001/wp-content/"
+"plugins/client-documentation\n"
+
+#: ../client-documentation.php:118
+msgid "Resources"
+msgstr "Bronnen"
+
+#: ../client-documentation.php:119
+msgid "Welcome"
+msgstr "Welkom"
+
+#: ../client-documentation.php:120
+msgid "Need Help ? All you need is here !"
+msgstr "Hulp nodig? Alles wat u nodig heeft is hier beschikbaar!"
+
+#: ../client-documentation.php:250
+msgid "How to create your first post"
+msgstr "Het schrijven van een eerste notitie"
+
+#: ../client-documentation.php:251
+msgid "Example of content"
+msgstr "Voorbeeld van inhoud"
+
+#: ../client-documentation.php:333
+msgid "Following fields are missing :"
+msgstr "De volgende velden missen:"
+
+#: ../client-documentation.php:334
+msgid "is missing !"
+msgstr "mist!"
+
+#: ../client-documentation.php:336
+msgid "View List"
+msgstr "Bekijk lijst"
+
+#: ../client-documentation.php:337
+msgid "Order saved"
+msgstr "Volgorde opgeslagen"
+
+#: ../client-documentation.php:338
+msgid "Loading"
+msgstr "Laden"
+
+#: ../client-documentation.php:339
+msgid "Processing"
+msgstr "Bewerken"
+
+#: ../client-documentation.php:340
+msgid "Done"
+msgstr "Klaar"
+
+#: ../client-documentation.php:341
+msgid "Error!"
+msgstr "Fout!"
+
+#: ../client-documentation.php:342
+msgid "Add item"
+msgstr "Notitie toevoegen"
+
+#: ../client-documentation.php:343
+msgid "Save changes"
+msgstr "Aanpassingen opslaan"
+
+#: ../client-documentation.php:344
+msgid "Add new"
+msgstr "Nieuw document toevoegen"
+
+#: ../client-documentation.php:397 ../client-documentation.php:398 ..
+#: views/import-export.inc.php:7
+msgid "Import / Export"
+msgstr "Import/export"
+
+#: ../client-documentation.php:405 ../client-documentation.php:406 ..
+#: views/settings.inc.php:7
+msgid "Settings"
+msgstr "Instellingen"
+
+#: ../client-documentation.php:413
+msgid "Documentation"
+msgstr "Documentatie"
+
+#: ../client-documentation.php:498
+msgid "Settings saved"
+msgstr "Instellingen opgeslagen"
+
+#: ../client-documentation.php:589
+msgid "title"
+msgstr "titel"
+
+#: ../client-documentation.php:597
+msgid "content"
+msgstr "inhoud"
+
+#: ../client-documentation.php:603
+msgid "link"
+msgstr "verwijzing"
+
+#: ../client-documentation.php:612
+msgid "file"
+msgstr "bestand"
+
+#: ../client-documentation.php:746
+msgid "error"
+msgstr "fout"
+
+#: ../views/list-add-edit.inc.php:11
+msgid "Simple Documentation"
+msgstr "Eenvoudige Documentatie"
+
+#: ../views/list-add-edit.inc.php:11
+msgid "Add New"
+msgstr "Nieuw toevoegen"
+
+#: ../views/list-add-edit.inc.php:18
+msgid "Documentation list"
+msgstr "Documentatie overzicht"
+
+#: ../views/list-add-edit.inc.php:47
+msgid "(default) "
+msgstr "(default)"
+
+#: ../views/list-add-edit.inc.php:91
+msgid "Add Content"
+msgstr "Inhoud toevoegen"
+
+#: ../views/list-add-edit.inc.php:96
+msgid "Video"
+msgstr "Video"
+
+#: ../views/list-add-edit.inc.php:100
+msgid "Note"
+msgstr "Notitie"
+
+#: ../views/list-add-edit.inc.php:104 ../views/list-add-edit.inc.php:129
+msgid "Link"
+msgstr "Verwijzing"
+
+#: ../views/list-add-edit.inc.php:108 ../views/list-add-edit.inc.php:133
+msgid "File"
+msgstr "Bestand"
+
+#: ../views/list-add-edit.inc.php:117
+msgid "Title"
+msgstr "Titel"
+
+#: ../views/list-add-edit.inc.php:136
+msgid "Upload a file"
+msgstr "Upload een bestand"
+
+#: ../views/list-add-edit.inc.php:137
+msgid "Select a file"
+msgstr "Kies een bestand"
+
+#: ../views/list-add-edit.inc.php:142
+msgid "Limit to user roles"
+msgstr "Beperk tot gebruikersrollen"
+
+#: ../views/list-add-edit.inc.php:144
+msgid "Leave blank to use default"
+msgstr "Laat leeg om de default te gebruiken"
+
+#: ../views/list-add-edit.inc.php:145
+msgid "Current Defaults"
+msgstr "Huidige defaults"
+
+#: ../views/list-add-edit.inc.php:181
+msgid "Information"
+msgstr "Informatie"
+
+#: ../views/list-add-edit.inc.php:183
+msgid "Welcome to Simple Documentation."
+msgstr "Welkom bij \"Eenvoudige Documentatie\""
+
+#: ../views/list-add-edit.inc.php:185
+msgid "Update"
+msgstr "Update"
+
+#: ../views/list-add-edit.inc.php:186
+msgid ""
+"This new update comes with new features such as item re-ordering and "
+"restricting access per user."
+msgstr ""
+"Deze nieuwe versie komt met nieuwe mogelijkheden zoals het rangschikken van "
+"onderdelen en het kunnen beperken van toegang per gebruiker."
+
+#: ../views/list-add-edit.inc.php:188
+msgid "Contribution"
+msgstr "Bijdrage"
+
+#: ../views/list-add-edit.inc.php:190
+msgid "Spanish translation by"
+msgstr "Spaanse vertaling door"
+
+#: ../views/list-add-edit.inc.php:191
+msgid "German translation by"
+msgstr "Duitse vertaling door"
+
+#: ../views/list-add-edit.inc.php:192
+msgid "Serbo-Croatian translation by"
+msgstr "Serbo-Croatian vertaling door"
+
+#: ../views/list-add-edit.inc.php:194
+msgid "If you want to contribute, feel free to "
+msgstr "Als u bij wilt dragen aan deze plugin dan bent u welkom om "
+
+#: ../views/list-add-edit.inc.php:194
+msgid "contact me"
+msgstr "contact op te nemen met mij"
+
+#: ../views/list-add-edit.inc.php:194
+msgid "or"
+msgstr "of"
+
+#: ../views/list-add-edit.inc.php:194
+msgid "fork the project on github"
+msgstr "het project op github te forken."
+
+#: ../views/list-add-edit.inc.php:196
+msgid "Plugin created by"
+msgstr "Plugin gemaakt door"
+
+#: ../views/list-add-edit.inc.php:196
+msgid "Report issues"
+msgstr "Melden van bugs"
+
+#: ../views/import-export.inc.php:9 ../views/import-export.inc.php:14
+msgid "Export"
+msgstr "Exporteer"
+
+#: ../views/import-export.inc.php:16
+msgid "Include options"
+msgstr "Opties opnemen"
+
+#: ../views/import-export.inc.php:17
+msgid "if included, options will be overwritten"
+msgstr "Wanneer opgenomen zullen de betaande opties overschreven worden."
+
+#: ../views/import-export.inc.php:20 ../views/import-export.inc.php:25
+msgid "Import"
+msgstr "Importeer"
+
+#: ../views/settings.inc.php:13
+msgid "As all fields are required, any empty field will keep its former value"
+msgstr "Omdat alle velden verplicht zijn houden lege velden hun huidige waarde"
+
+#: ../views/settings.inc.php:19
+msgid "General"
+msgstr "algemeen"
+
+#: ../views/settings.inc.php:23
+msgid "Number of items displayed per page"
+msgstr "Aantal documenten per pagina"
+
+#: ../views/settings.inc.php:27
+msgid "Default client user role"
+msgstr "Default gebruikers rol"
+
+#: ../views/settings.inc.php:45
+msgid "Custom titles & content"
+msgstr "Aangepaste titels en inhoud"
+
+#: ../views/settings.inc.php:51
+msgid "Widget Title"
+msgstr "Widget titel"
+
+#: ../views/settings.inc.php:52
+msgid "Welcome Title"
+msgstr "Welkom titel"
+
+#: ../views/settings.inc.php:53
+msgid "Welcome Message"
+msgstr "Welkom bericht"
+
+#: ../views/settings.inc.php:83
+msgid "Save"
+msgstr "Opslaan"
+
+#: ../views/widget.inc.php:98
+msgid "Pages"
+msgstr "Pagina's"
+
+#: ../views/widget.inc.php:112
+msgid "No Documentation available yet."
+msgstr "Nog geen documenten beschikbaar."
+
+msgid "Dutch translation by"
+msgstr "Nederlandse vertaling door"
