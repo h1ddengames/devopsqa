@@ -51,6 +51,23 @@
 
 #
 #### Documentation
+- Documentation is material that provides official information or evidence or serves as a record.
+- Here are some examples of where documentation is critical to software testing:
+  - When a client contracts a company this contract is in fact documentation that states the requirements, terms and conditions between the client and the company.
+    - Without a contract a client might get angry and sue the company because the company had not provided functionality that the client thought they were paying for. In reality, the company would have no idea what the requirements are since there was no documentation on what was expected and what needed to be delivered. 
+  - Documentation can serve as a standard or guideline for common tasks carried out within a company.
+    - You are tasked with creating test scripts.
+      - Without documentation you would have to look through the entirety of the test scripts created by the company you work for in order to figure out what new tests must be created and what unused/unnecessary tests/scripts need to be updated.
+        - Additionally all the scripts made by other people will all be very different from one another since no standards were set by the company in the form of documentation.
+      - With documentation, you would know what scripts were implemented, which ones needed updating/removal and what guidelines/standards to follow when creating tests/scripts of your own.
+  - Documentation can make or break a project.
+    - Testing should be fully documented in order to provide efficient resource control, monitoring, and allocation.
+      - Referring back to the previous example about being tasked with creating test scripts:
+        - If everyone on the QA team did the same thing as you where they look through all the current scripts for tests then try to create new ones or update old ones, every once in a while two or more people will generate the same test.
+          - Now your code base contains the same test which wastes development time for creating the test and test time for when you run all the tests.
+            - This is a loss of both resource control and resource allocation. 
+        - Since no one has documented which scripts were created, what they are used for, and what they contain there is no resource monitoring over the QA code base.
+
 - Documentation includes the following:
 
     #
@@ -58,7 +75,8 @@
 
     #
     #### Traceability Matrix
-
+    - Traceability Matrix can also be called Requirement Traceability Matrix (RTM) and it aptures all requirements proposed by the client or software development team and their traceability in a single document delivered at the conclusion of the Software Development Life Cycle.
+  
     #
     #### Feasibility Matrix
 
@@ -67,12 +85,24 @@
 
     #
     #### Test Plan
-
-    #
-    #### Test Schedule 
+    - Test Plan is a document that describes the scope, approach, objectives, resources, and schedule of a software testing effort. 
+    - It is the document that outlines the who, what, when, and how of a testing project.
 
     #
     #### Test Case
+    - Test Case is a set of actions executed to verify a particular feature or functionality of your software application. The Test Case has a set test data, precondition, certain expected and actual results developed for specific test scenario to verify any requirement.
+
+    - A test case includes specific variables or conditions, using which a test engineer can determine as to whether a software product is functioning as per the requirements of the client or the customer.
+  
+    #
+    #### Test Scenario
+    - Test Scenario is defined as any functionality that can be tested. It is a collective set of test cases which helps the testing team to determine the positive and negative characteristics of the project.
+
+    - Test Scenario gives a high-level idea of what we need to test.
+    - Defines which area of the application will be tested.
+  
+    #
+    #### Test Schedule 
 
     #
     #### Test Script

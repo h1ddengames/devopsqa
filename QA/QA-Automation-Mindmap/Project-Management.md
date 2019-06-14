@@ -26,7 +26,7 @@
 
         #
         #### Sprints
-        - Sprints are an allocated time to complete several items from the product backlog based on team size and a concensus on the duration of the allocated time (usually 2 weeks). 
+        - Sprints are an allocated time to complete several items from the product backlog based on team size and a consensus on the duration of the allocated time (usually 2 weeks). 
         - Before a sprint starts, there is a sprint planning phase where the developers choose tasks based on a priority system.
         - At the end of this sprint planning phase, a sprint backlog is created. This is essentially a list of all the tasks that need to be completed before the sprint is finished.
         - Once the sprint has finished, there is a meeting called a sprint review where usually the product is demoed to the product owner or customer.
