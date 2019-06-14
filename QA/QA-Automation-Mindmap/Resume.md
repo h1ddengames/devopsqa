@@ -10,29 +10,43 @@
     - Combining tests where possible in order to avoid webdriver start up time:
         - Example: Combining login and cart functionality checking.
             - Assert/Verify statements will let us know what part of the test failed so it's ok to combine these two.
+    - Using a RemoteWebDriver on another machine or using DesiredCapabilities in order to set the WebDriver to run in headless mode. 
+    - Depending on use case, think of adding cross browser support/tests.
 
     #
     #### Framework Design
     - Utilizing an Object-Oriented design to make webdriver reuse possible for parallel testing.
-    - Abstracting away the need for Selenium knowlege
-        - Creating self explanitory methods/ method names with simple method signatures. 
+    - Abstracting away the need for Selenium knowledge
+        - Creating self explanatory methods/ method names with simple method signatures. 
     - Combining POM (Page Object Model) + BDD(T) (Behaviour Driven Development/Testing with Cucumber) and/or KDD(T) (Keyword Driven Development/Testing with Robot Framework) and/or DDT (Data Driven Testing with Apache POI/JXL, Excel, MySQL)
 
     #
     #### Example Projects
-
+    <b>Note: With all of these projects, put them up on Github or Gitlab or Bitbucket in order to be able to share them with the hiring staff. </b>
+    - Create an example project highlighting Keyword Driven Testing skills.
+    - Create an example project highlighting Data Driven Testing skills.
+    - Create an example project highlighting Behaviour Driven Testing skills.
+    - Create an example project highlighting API testing skills.
+    - Create an example project highlighting Database testing skills.
+    - Create an example project highlighting Database testing skills.
+    - Create an example project highlighting mastery of Selenium and TestNG where you test a well known website skills.
+    - Go to a website like Hacker Rank or Leet Code and create a local project where you store the answers you've thought up to the given coding questions. 
+  
     #
-    #### First day on the job
+    #### First day/week/month on the job
 
     #
     #### Typical day on the job
-    - Making test cases 
-        - Creating scripts out of the test cases.
-        - Updating/removing unused tests.
     - Making a test plan with the help of the more senior members of my team.
+    - Making test cases 
+      - Creating scripts out of the test cases.
+      - Updating/removing unused tests.
+      - Updating/removing broken tests.
+    - Bug reporting
+      - When tests fail, report when and what test failed.
+      - Update status of features on JIRA after getting test results from finished tests.
     - Updating our core automation framework that's used throughout our testing scripts.
-    - Updating our POM object repository.
-    - Update status of features on JIRA after getting test results from finished tests.
+      - Updating our POM repository.
     - Talk with my designated developer to brainstorm potential fixes to bugs. 
 
 #
@@ -46,7 +60,7 @@
     #### Traceability Matrix
 
     #
-    #### Feasability Matrix
+    #### Feasibility Matrix
 
     #
     #### Responsibility Matrix
@@ -89,7 +103,7 @@
     Does the tasks of Test Engineer / QA Test Engineer / QA Tester but also is able to create automation testing frameworks and test scripts.
 
     #### Project Manager Tester
-    Collects accurate metrics and reports the same to the project manager of the project. Responsible for interacting with SQA (Software Quality Assurance - the process which assures that all software engineering proccesses, methods, activities, and work items are monitored and comply against the defined standards. These defined standards could be a combination of any like ISO 9000, CMMI model, ISO15504, etc.) to give updates about the quality of the project. Involved from the requirement phase onwards. 
+    Collects accurate metrics and reports the same to the project manager of the project. Responsible for interacting with SQA (Software Quality Assurance - the process which assures that all software engineering processes, methods, activities, and work items are monitored and comply against the defined standards. These defined standards could be a combination of any like ISO 9000, CMMI model, ISO15504, etc.) to give updates about the quality of the project. Involved from the requirement phase onwards. 
 
     #### Team Lead Tester
     Mainly helps and guides senior testers. They are primarily involved in decision making of the test strategy, what kind of automation tools will be used. They act as the bridge between the project manager and other team members. 
