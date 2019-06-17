@@ -75,7 +75,7 @@
 
     #
     #### Traceability Matrix
-    - Traceability Matrix can also be called Requirement Traceability Matrix (RTM) and it aptures all requirements proposed by the client or software development team and their traceability in a single document delivered at the conclusion of the Software Development Life Cycle.
+    - Traceability Matrix can also be called Requirement Traceability Matrix (RTM) and it captures all requirements proposed by the client or software development team and their traceability in a single document delivered at the conclusion of the Software Development Life Cycle.
   
     #
     #### Feasibility Matrix
@@ -87,6 +87,99 @@
     #### Test Plan
     - Test Plan is a document that describes the scope, approach, objectives, resources, and schedule of a software testing effort. 
     - It is the document that outlines the who, what, when, and how of a testing project.
+    - The first thing that should be done during the testing process.
+    - The plan is broken down into manageable pieces and serves as a record of the testing objectives.
+      - Just like how software engineers break down a problem into simple steps then write comments, each step of the test process is outlined in the documentation.
+    - The value in a test plan comes from the following:
+      - The test plan acts as a quick guide for testing process
+      - It helps avoid testing of "out of scope" functionality
+        - Limiting the scope means more focus on the parts that matter the most.
+        - Additionally, not having clear objectives will make it uncertain when the test process ends or what needs to be tested.
+      - Determining the time, cost, and effort that will be required to test the functionality of any given software.
+        - Without knowing how long the testing effort is going to take or the total cost, projects can get delayed or cancelled.
+      - Defining roles and responsibilities for testers.
+        - Helps avoid having multiple people working on the same tests.
+      - Provides a schedule for testing activities. 
+      - Outlines the resource requirements and equipment
+      - Is a source of proof should you need it in the future.
+    - <b> An important note: update your test plan as you make changes to it. </b>
+    - There are three types of test plans:
+      - Master test plan: a single high-level test plan for a project/product that unifies all other test plans
+      - Level specific test plan: intermediate plans specifically related to a level of software testing
+      - Type specific test plan: plans for major types of testing like performance testing plan and security test plan
+    - In order to create a test plan there are 6 steps:
+      - Analyze the product
+        - Understand the features and functionality as well as the business requirements of the product.
+        - Understand the use cases and evaluate the product from the user's point of view.
+        - Who was the product made for?
+        - How will this product work?
+        - What is this product for?
+        - Interview the client, designer, developer.
+        - Perform a product walkthrough:
+          - Try out the product as if you are the end user and see if it satisfies the requirements.
+      - Develop test strategy
+        - Define the project/product's testing objectives, scope, and the means to achieve them.
+        - Determine testing effort and costs.
+        - Depending on the requirements of the product you'll need to adjust the testing type (Identify the testing type):
+          - If there will be thousands of users, perform load testing.
+          - If there are online transactions, perform penetration and security testing.
+        - Document the risks and issues.
+        - Create the test logistics.
+      - Define test objectives
+        - Define the scope
+          - List the features that needs to be tested.
+          - List the features that are NOT to be tested.
+          - Define the goal based on above features.
+      - Resource planning
+        - This is a detailed summary of all types of resources required to complete project task.
+          - Different software and hardware requirements (server, computers, network, test tools)
+          - Employee requirement (test manager, testers, developers, test admin, etc)
+      - Schedule and estimation
+        - Define the roles and responsibilities of the testing team along with a schedule that tells everyone what to do and when to do it.
+        - There are components to break the above task down into such as the following:
+          - Tasks
+          - Members responsible for tasks
+          - Estimated effort
+          - Employee and project deadline
+          - Project estimation
+          - Possible project risks
+      - Determine test deliverables
+        - A list of all the documents, tools, and other components that has to be developed and maintained in support of the testing effort.
+        - Separate out the deliverables into these parts:
+          - Before testing
+            - Test plan documents
+            - Test cases documents
+            - Test design specifications
+          - During testing
+            - Test scripts
+            - Simulators
+            - Test data
+            - Test matrix
+            - Error logs
+            - Execution logs
+          - After testing
+            - Test results
+            - Defects report
+            - Release notes
+    - The standard for test plan documentation:
+        | Parameter                 | Description  |
+        | ---                       | ---       |
+        | Test Plan Identifier      | Uniquely identifies the test plan and may include the version number     |
+        | Introduction              | Sets objectives, scope, goals, resource, and budget constraints     | 
+        | Test Items                | Lists the systems and subsystems which can be tested   |
+        | Features to be tested     | All the feature and functionality to be tested are listed here |
+        | Features not to be tested | Lists the characteristics of products that need not be tested |
+        | Approach                  |  Has sources of test data, inputs and outputs, testing priorities |
+        | Item pass/fail            | Describes a success criteria for evaluating the test results |
+        | Suspension Criteria       | Has criteria that may result in suspending testing activities |
+        | Test Deliverables | Includes test cases, simple data, test report, issue log |
+        | Testing Tasks | Describes dependencies between tasks and resources needed |
+        | Environmental Needs | Lists software, hardware or other testing requirements |
+        | Responsibilities | Lists roles and responsibilities assigned to the testing team |
+        | Staffing Needs | Describes the additional training needs for the staff |
+        | Schedule | Details on when the testing activities will take place are listed |
+        | Risks | Lists overall risk of the project as it pertains to testing |
+        | Approvals | Contains signature of approval from stakeholders |
 
     #
     #### Test Case
