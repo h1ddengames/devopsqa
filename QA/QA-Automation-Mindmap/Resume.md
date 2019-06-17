@@ -162,6 +162,7 @@
             - Defects report
             - Release notes
     - The standard for test plan documentation:
+  
         | Parameter                 | Description  |
         | ---                       | ---       |
         | Test Plan Identifier      | Uniquely identifies the test plan and may include the version number     |

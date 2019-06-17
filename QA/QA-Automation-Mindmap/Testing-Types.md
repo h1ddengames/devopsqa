@@ -74,11 +74,13 @@ In order to create a Keyword driven framework, you need following things:
         | 1           | Check for valid credentials | 1. Launch app 2. Enter username, 3. Click login, 4. Check results | Username: valid, password: valid | Login Success
     3. Create the test scripts
     4. Create an excel/csv with the input test data
+   
         | Username  | Password  |
         | ---       | ---       |
         | valid     | valid     |
         | invalid   | valid     | 
         | valid     | invalid   |
+
     5. Modify the test scripts to loop over input test data. 
 
 - Best practices:
