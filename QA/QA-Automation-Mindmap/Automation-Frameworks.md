@@ -250,6 +250,20 @@
         - window()
 
     #
+    #### Locators
+    - There are 8 ways of locating an element on a webpage.
+      - An element can be something like the login button or an image or even a ```<div></div>```
+    - These are the locators:
+      - ID: driver.findElement(By.id("menu"));
+      - Name: driver.findElement(By.name("home"));
+      - Link Text: driver.findElement(By.linkText("Read on Wikipedia"));
+      - Partial Link Text: driver.findElement(By.partialLinkText("Wikipedia"));
+      - Tag Name: driver.findElement(By.tagName("div"));
+      - Class Name: driver.findElement(By.className("container-top"));
+      - CSS: driver.findElement(By.cssSelector(".top-menu>li"));
+      - Xpath: driver.findElement(By.xpath("//*[@id='top-menu']/li"));
+
+    #
     #### Exceptions
     - Some common exceptions include:
         - <b>ElementNotVisibleException</b>: Although an element is present in the DOM, it is not visible (cannot be interacted with). For example: Hidden Elements – defined in HTML using type=”hidden”.
