@@ -254,14 +254,69 @@
     - There are 8 ways of locating an element on a webpage.
       - An element can be something like the login button or an image or even a ```<div></div>```
     - These are the locators:
-      - ID: driver.findElement(By.id("menu"));
-      - Name: driver.findElement(By.name("home"));
-      - Link Text: driver.findElement(By.linkText("Read on Wikipedia"));
-      - Partial Link Text: driver.findElement(By.partialLinkText("Wikipedia"));
-      - Tag Name: driver.findElement(By.tagName("div"));
-      - Class Name: driver.findElement(By.className("container-top"));
-      - CSS: driver.findElement(By.cssSelector(".top-menu>li"));
-      - Xpath: driver.findElement(By.xpath("//*[@id='top-menu']/li"));
+      - ID: ```driver.findElement(By.id("menu"));```
+      - Name: ```driver.findElement(By.name("home"));```
+      - Link Text: ```driver.findElement(By.linkText("Read on Wikipedia"));```
+      - Partial Link Text: ```driver.findElement(By.partialLinkText("Wikipedia"));```
+      - Tag Name: ```driver.findElement(By.tagName("div"));```
+      - Class Name: ```driver.findElement(By.className("container-top"));```
+      - CSS: ```driver.findElement(By.cssSelector(".top-menu>li"));```
+      - Xpath: ```driver.findElement(By.xpath("//*[@id='top-menu']/li"));```
+
+    #
+    #### XPath
+    - XPath stands for XML Path Language.
+    - XPath uses "path like" syntax to identify and navigate nodes in an XML document.
+    - XPath can be used to navigate through elements and attributes in an XML document.
+    - Absolute Path - this type of XPath starts at the root of the document and starts with a single "/" slash.
+    - Relative Path - this type of XPath starts at the element that you specify and starts with two "//" slashes.
+
+        #
+        #### XPath Nodes
+        - In XPath, there are seven kinds of nodes: 
+            1. element: ```driver.findElement(By.xpath("//li"));``` // Anything with an opening tag such as ```<div></div>``` ```<li></li>``` ```<ul></ul>``` ```<body></body>```
+            2. attribute: ```driver.findElement(By.xpath("//title[@*='en']"));``` // Anything with an attribute such as ```<title lang='en'></title>``` ```<title s='en'></title>```
+            3. text: ```driver.findElement(By.xpath("//li[text()='Data']"));```
+            4. namespace 
+            5. processing-instruction
+            6. comment ```driver.findElement(By.xpath("/table/length/following::comment()[1]"));``` // Table has child length and right after length there is a comment. This xpath finds the element length then looks right after the element to find the first comment.
+            7. document nodes
+
+        #
+        #### XPath Axes
+        - In Xpath, an axis represents a relationship to the context (current) node, and is used to locate nodes relative to that node on the tree.
+            1. ancestor	- Selects all ancestors (parent, grandparent, etc.) of the current node
+            2. ancestor-or-self	- Selects all ancestors (parent, grandparent, etc.) of the current node and the current node itself
+            3. attribute - Selects all attributes of the current node
+            4. child - Selects all children of the current node
+            5. descendant - Selects all descendants (children, grandchildren, etc.) of the current node
+            6. descendant-or-self - Selects all descendants (children, grandchildren, etc.) of the current node and the current node itself
+            7. following - Selects everything in the document after the closing tag of the current node 
+            8. following-sibling - Selects all siblings after the current node
+            9. namespace - Selects all namespace nodes of the current node 
+            10. parent - Selects the parent of the current node 
+            11. preceding - Selects all nodes that appear before the current node in the document, except ancestors, attribute nodes and namespace nodes 
+            12. preceding-sibling - Selects all siblings before the current node
+            13. self - Selects the current node
+
+        #
+        #### XPath Operators
+        | Operator | Description | Example
+        | --- | --- | --- |
+        | ```|```    |  Computes two node-sets | ```//book | //cd``` (combines all the results of //book and all the results of //cd) |
+        | ```+``` | Addition| 6 + 4 |
+        | ```-``` | Subtraction | 6 - 4 |
+        | ```*``` | Multiplication | 6 * 4 |
+        | ```div``` | Division | 8 div 4 |
+        | ```=``` | Equal | price=9.80 |
+        | ```!=```| Not equal | price!=9.80 |
+        | ```<```| Less than | price<9.80 |
+        | ```<=```| Less than or equal to | price<=9.80 |
+        | ```>```| Greater than | price>9.80 |
+        | ```>=```| Greater than or equal to| price>=9.80 |
+        | ```or```| or | //price[text()='29.99' or text()='30.00'] |
+        | ```and```| and | //price[text()='29.99' and text()>='25'] |
+        | ```mod```| mod | 5 mod 2 |
 
     #
     #### Exceptions
