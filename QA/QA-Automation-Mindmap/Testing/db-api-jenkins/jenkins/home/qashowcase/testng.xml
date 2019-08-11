@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--<!DOCTYPE suite SYSTEM "testng-1.0.dtd">-->
+
+<!-- If any certificate verification errors occur, change the above "http://testng.org/testng-1.0.dtd" to "testng-1.0.dtd"
+        then add the testng-1.0.dtd file to the project's home directory. -->
+<!-- The testng-1.0.dtd file can be found at http://testng.org/testng-1.0.dtd -->
+<suite name="Suite1" verbose="1" >
+    <test name="unsortedTests" >
+        <classes>
+            <class name="unsorted.AdhocTests" />
+        </classes>
+    </test>
+</suite>
