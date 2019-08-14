@@ -8,7 +8,7 @@ services:
       - "80:80"
     volumes:
       - type: bind
-        source: c:/Users/skarim/Downloads/db-api-jenkins/www
+        source: c:/Users/h1ddengames/Desktop/db-api-jenkins/www
         target: /usr/local/apache2/htdocs
     restart: always
     links:
@@ -21,10 +21,10 @@ services:
     image: mysql:5.7
     volumes:
       - type: bind
-        source: c:/Users/skarim/Downloads/db-api-jenkins/sql
+        source: c:/Users/h1ddengames/Desktop/db-api-jenkins/sql
         target: /var/lib/mysql
       - type: bind
-        source: c:/Users/skarim/Downloads/db-api-jenkins/sqldumps
+        source: c:/Users/h1ddengames/Desktop/db-api-jenkins/sqldumps
         target: /usr/databases
     restart: always
     ports:
@@ -61,13 +61,13 @@ services:
       - "50000:50000"
     volumes:
       - type: bind
-        source: c:/Users/skarim/Downloads/db-api-jenkins/jenkins
+        source: c:/Users/h1ddengames/Desktop/db-api-jenkins/jenkins
         target: /var/jenkins_home
       - type: bind
-        source: c:/Users/skarim/Downloads/db-api-jenkins/jenkins/home
+        source: c:/Users/h1ddengames/Desktop/db-api-jenkins/jenkins/home
         target: /home
       - type: bind
-        source: c:/Users/skarim/Downloads/db-api-jenkins/jenkins/docker
+        source: c:/Users/h1ddengames/Desktop/db-api-jenkins/jenkins/docker
         target: /var/run/docker.sock
     restart: always
 
