@@ -59,7 +59,7 @@ public class APITesting {
     }
 
     // This GET request gets ALL employees.
-    @Test(description = "Get all the current employees: GET practice.")
+    @Test(priority = 1, description = "Get all the current employees: GET practice.")
     public void checkForAllEmployees() {
         Response response = getAllEmployees();
 
@@ -99,13 +99,18 @@ public class APITesting {
     // http://localhost:8080/api/tutorial/1.0/employees/
     // vs
     // http://localhost:8080/api/tutorial/1.0/employees/1
-    @Test(description = "Get the first employee: GET practice.")
+    @Test(priority = 2, description = "Get the first employee: GET practice.")
     public void getFirstEmployee() {
         Response response = getEmployee(1);
         Assert.assertEquals(response.statusCode(), 200);
+        // Note that employeeId MUST be equal to an integer NOT a string.
+        // The Testng/Hamcrest comparison log might confuse you because it will say
+        // Expected: 1
+        // Actual: 1
+        // But it's really comparing the string "1" to the int 1.
         response.then()
                 .assertThat()
-                .body("id", equalTo("1"))
+                .body("employeeId", equalTo(1))
                 .body("firstName", equalTo("John"))
                 .body("lastName", equalTo("Doe"))
                 .body("email", equalTo("john@doe.com"))
@@ -113,7 +118,7 @@ public class APITesting {
     }
 
     // POST request CREATES a new object.
-    @Test(description = "Add a new employee: POST practice.")
+    @Test(priority = 3, description = "Add a new employee: POST practice.")
     public void addNewEmployee() {
         System.out.println("Before: ");
         getAllEmployees();
@@ -136,7 +141,9 @@ public class APITesting {
         Response response = request.post(localURI);
 
         response.prettyPrint();
-        Assert.assertEquals(response.statusCode(), 200);
+        // Notice that we are checking for status code 201 rather than the usual 200 because
+        // 201 means that the request has been fulfilled and has resulted in one ore more new resources being created.
+        Assert.assertEquals(response.statusCode(), 201);
 
         System.out.println("After: ");
         response = getAllEmployees();
@@ -150,7 +157,7 @@ public class APITesting {
     }
 
     // DELETE request deletes an object.
-    @Test(description = "Remove an employee: DELETE practice.")
+    @Test(priority = 4, description = "Remove an employee: DELETE practice.")
     public void removeEmployee() {
         System.out.println("Before: ");
         getAllEmployees();
@@ -184,7 +191,7 @@ public class APITesting {
     }
 
     // PUT requires you to give the entire object as the payload.
-    @Test(description = "Updates an employee: PUT practice.")
+    @Test(priority = 5, description = "Updates an employee: PUT practice.")
     public void updateEmployeeWithPut() {
         System.out.println("Before: ");
         getAllEmployees();
@@ -208,7 +215,7 @@ public class APITesting {
                 .body("firstName[0]", equalTo("Johnny"));
     }
 
-    @Test(description = "Restore an employee to before values: PUT practice.")
+    @Test(priority = 6, description = "Restore an employee to before values: PUT practice.")
     public void restoreEmployeeWithPut() {
         System.out.println("Before: ");
         getAllEmployees();
@@ -236,7 +243,7 @@ public class APITesting {
     // This means you don't need to provide all the variables but rather only the variable you want to change.
     // Example: With PUT you need to provide int id, String firstName, String lastName, String email, String phoneNumber
     // But with PATCH you only need to provide firstName or email
-    @Test(description = "Updates an employee: PATCH practice")
+    @Test(priority = 7, description = "Updates an employee: PATCH practice")
     public void updateEmployeeWithPatch() {
         System.out.println("Before: ");
         getAllEmployees();
@@ -261,5 +268,32 @@ public class APITesting {
         getAllEmployees().then()
                 .assertThat()
                 .body("firstName[0]", equalTo("Johnny"));
+    }
+
+    @Test(priority = 8, description = "Updates an employee: PATCH practice")
+    public void restoreEmployeeWithPatch() {
+        System.out.println("Before: ");
+        getAllEmployees();
+
+        // Generate the JsonObject with the information that should be saved.
+        JsonObject requestParams = new JsonObject();
+        requestParams.addProperty("firstName", "John");
+
+        RequestSpecification request = RestAssured.given();
+        // Add a header stating the Request body is a JSON
+        request.header("Content-Type", "application/json");
+        // Add the Json to the body of the request
+        request.body(requestParams.getAsJsonObject());
+
+        // Post the request and check the response
+        Response response = request.patch(localURI + 1);
+
+        response.prettyPrint();
+        Assert.assertEquals(response.statusCode(), 200);
+
+        System.out.println("After: ");
+        getAllEmployees().then()
+                .assertThat()
+                .body("firstName[0]", equalTo("John"));
     }
 }
