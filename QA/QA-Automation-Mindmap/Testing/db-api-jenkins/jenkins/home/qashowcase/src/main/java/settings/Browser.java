@@ -1,5 +1,5 @@
 package settings;
 
 public enum Browser {
-    CHROME, FIREFOX;
+    CHROME, FIREFOX, EDGE, IE;
 }

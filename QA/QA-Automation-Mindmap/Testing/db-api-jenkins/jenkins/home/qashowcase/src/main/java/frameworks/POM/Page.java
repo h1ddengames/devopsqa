@@ -22,6 +22,7 @@ public class Page {
     @FindBy(xpath="//a[@class='logo logo--nordstromrack']") protected WebElement logo;
     @FindBy(xpath="//input[@class='search-bar__input']") protected WebElement searchBar;
     @FindBy(linkText="Log In / Sign Up") protected WebElement login;
+
     @FindBy(xpath="//div/div/a[@aria-label='Cart']") protected WebElement shoppingCart;
     @FindBy(xpath="//nav[@class='site-header__primary-nav']/ul/li[1]/a") protected WebElement womensSection;
     @FindBy(xpath="//nav[@class='site-header__primary-nav']/ul/li[2]/a") protected WebElement shoesSection;
@@ -33,6 +34,10 @@ public class Page {
     @FindBy(xpath="//nav[@class='site-header__primary-nav']/ul/li[8]/a") protected WebElement giftsSection;
     @FindBy(xpath="//nav[@class='site-header__primary-nav']/ul/li[9]/a") protected WebElement clearanceSection;
 
+    public String getPageUrl() {
+        return driver.getCurrentUrl();
+    }
+
     public Page(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -43,12 +48,12 @@ public class Page {
     public void enterTextIntoSearchBar(String text) { searchBar.sendKeys(text); }
     public void goToShoppingCart() { shoppingCart.click(); }
     public void goToWomensSection() { womensSection.click(); }
-    public void goToShoesSection() { }
-    public void goToBagsAccessoriesSection() { }
-    public void goToBeautySection() { }
-    public void goToMensSection() { }
-    public void goToKidsSection() { }
-    public void goToHomeSection() { }
-    public void goToGiftsSection() { }
-    public void goToClearanceSection() { }
+    public void goToShoesSection() { shoesSection.click(); }
+    public void goToBagsAccessoriesSection() { bagsAccessoriesSection.click(); }
+    public void goToBeautySection() { beautySection.click(); }
+    public void goToMensSection() { mensSection.click(); }
+    public void goToKidsSection() { kidsSection.click(); }
+    public void goToHomeSection() { homeSection.click(); }
+    public void goToGiftsSection() { giftsSection.click(); }
+    public void goToClearanceSection() { clearanceSection.click(); }
 }
