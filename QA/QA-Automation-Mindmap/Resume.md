@@ -1,23 +1,28 @@
 ## Resume
+
 - This document contains all information related to any questions that can be asked about your resume. 
+
 #
 
 #### Typical Day on the Job
+
 - Typical day on the job includes the following:
 
     #
     #### Script Design
+
     - Combining tests where possible in order to avoid webdriver start up time:
         - Example: Combining login and cart functionality checking.
             - Assert/Verify statements will let us know what part of the test failed so it's ok to combine these two.
-    - Using a RemoteWebDriver on another machine or using DesiredCapabilities in order to set the WebDriver to run in headless mode. 
+    - Using a RemoteWebDriver on another machine or using DesiredCapabilities in order to set the WebDriver to run in headless mode.
     - Depending on use case, think of adding cross browser support/tests.
 
     #
     #### Framework Design
+
     - Utilizing an Object-Oriented design to make webdriver reuse possible for parallel testing.
     - Abstracting away the need for Selenium knowledge
-        - Creating self explanatory methods/ method names with simple method signatures. 
+        - Creating self explanatory methods/ method names with simple method signatures.
     - Combining POM (Page Object Model) + BDD(T) (Behaviour Driven Development/Testing with Cucumber) and/or KDD(T) (Keyword Driven Development/Testing with Robot Framework) and/or DDT (Data Driven Testing with Apache POI/JXL, Excel, MySQL)
 
     #
@@ -30,7 +35,7 @@
     - Create an example project highlighting Database testing skills.
     - Create an example project highlighting Database testing skills.
     - Create an example project highlighting mastery of Selenium and TestNG where you test a well known website skills.
-    - Go to a website like Hacker Rank or Leet Code and create a local project where you store the answers you've thought up to the given coding questions. 
+    - Go to a website like Hacker Rank or Leet Code and create a local project where you store the answers you've thought up to the given coding questions.
   
     #
     #### First day/week/month on the job
@@ -38,7 +43,7 @@
     #
     #### Typical day on the job
     - Making a test plan with the help of the more senior members of my team.
-    - Making test cases 
+    - Making test cases
       - Creating scripts out of the test cases.
       - Updating/removing unused tests.
       - Updating/removing broken tests.
@@ -47,7 +52,8 @@
       - Update status of features on JIRA after getting test results from finished tests.
     - Updating our core automation framework that's used throughout our testing scripts.
       - Updating our POM repository.
-    - Talk with my designated developer to brainstorm potential fixes to bugs. 
+      - Adding new feature files for our BDD framework.
+    - Talk with my designated developer to brainstorm potential causes for bugs.
 
 #
 #### Documentation
