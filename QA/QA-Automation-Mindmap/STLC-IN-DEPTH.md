@@ -1,5 +1,59 @@
 # STLC - Software Testing Life Cycle In Depth
 
+## Software Testing Life Cycle
+
+    1. Requirement Analysis - 
+       1. Documents involved:
+          1. Requirements Specification Documents
+          2. Functional Specification Documents - How does the particular software works
+          3. Design Specification Documents (use cases, etc) - How will the particular software be built
+          4. Use Case Documents - How will the customer use the software
+          5. Test Traceability Matrix for identifying Test Coverage - How many tests are being run for each particular feature/requirement.
+    2. Test Planning - Plan out the testing process
+       1. Documents involved:
+          1. Test Plan - What needs to be tested, when does it need to be tested, how will it be tested? In an agile/scrum environment there is no separate test plan document created. The scrum board will be the test plan. In a waterfall, v-shaped, iterative, or spiral model of software development, there will be a Test Plan Document created during this phase. 
+          2. Test Scenario
+       2. Terms:
+          1. Test Scope - In scope (features that must be tested), out of scope (features that we are not worried about currently)
+          2. Test Environment - Production environment (prod) - what the customer experiences, QA Environment - will be as similar to the production environment as possible, Development Environment (dev) - Should be as close to production as possible but might have a different setup in order to make it easier for the developer to develop the software.
+             1. Code Freeze - Some places don't have more than 2 environments (prod and dev) so they will implement a code freeze where on a certain day, there will be no new code added to the code base by the developers. The QA will now be able to test on the dev environment. Make sure to record the version of the software being tested, when it was tested, and what bugs were found.
+          3. Test Methodologies
+          4. Manual and Automation Testing
+          5. Defect Management
+          6. Configuration Management
+          7. Risk Management
+    3. Test Development - 
+       1. Documents involved:
+          1. Test Plan
+          2. RTM
+          3. Test Cases
+       2. Terms:
+          1. Test Traceability Matrix and Test Coverage
+          2. Test Scenarios Identification and Test Case preparation
+          3. Test data and test script preparation
+          4. Test case reviews and approval
+          5. Base lining under configuration management
+    4. Test Execution - 
+       1. Documents involved:
+          1. Test Cases
+          2. Test Execution report
+          3. Bug report
+          4. Requirement traceability matrix
+    5. Defect Reporting - 
+       1. Documents involved:
+          1. Test report
+          2. Bug report
+       2. Terms:
+          1. Defect logging - using specialized software (Jira) record a description of the bug with steps to reproduce it, the software version, and other relevant data.
+          2. Assigning defect and fixing - A defect must be assigned to a developer in order to have it fixed. The developer can decide if it is a bug, if they can fix it, and when it will be fixed. Sometimes the bug will be assigned to the project manager or test lead and they will be the ones to reassign the bug to a developer.
+          3. Retesting - Once a bug has been marked as fixed or "closed" in the defect tracking software (Jira), you will have to retest using the conditions documented in the bug report.
+          4. Defect closing 
+    6. Retest defects
+    7. Product Delivery - After the software has undergone several tests, the acceptance test is done by the user/client.
+       1. Documents involved:
+          1. Test summary reports
+          2. UAT Test Plan, UAT Test cases
+
 ## Tasks required for STLC
 
     - Creating test cases from test scenarios.
@@ -67,9 +121,49 @@
   - System testing - testing that is conducted when software development is nearing completion and most of the features have been implemented. Testing is done to verify that the system complies with the specified requirements.
   - Acceptance testing - testing is done by the client/customer where they decide if the software complies with the business requirements.
 
+## Bug Life Cycle
+
+1. New defect has been found and reported.
+   1. Defect can be marked as invalid (cannot reproduce bug)
+   2. Defect can be marked as designed (it's not a bug, it's a feature)
+   3. Defect can be marked as deferred (will be handled in a later version)
+   4. Defect can be marked as duplicate (same bug as another bug that's already been reported)
+2. If the defect is valid, it will be assigned to a developer to fix.
+3. Once the defect has been marked as fixed, it needs to undergo retesting.
+4. If the defect is still found, it gets reopened and reassigned to a developer.
+5. If the defect is no longer found, then the defect is closed.
+6. If the same defect is found again, the the defect is reopened and goes through these same steps again.
+
+## Bug Status
+
+1. New - The bug has just been reported by the qa team.
+2. Open - The bug will now be considered by the dev team.
+3. Assigned - The bug has been assigned to a developer to fix.
+4. Test - The software is currently being tested to check for the existence of the bug.
+5. Verified - The bug has been properly tested and it is no longer in the software.
+6. Deferred - The bug will be fixed in a later version of the software.
+7. Reopened - The bug reappeared even after it was marked as fixed before.
+8. Duplicate - The bug has been reported before.
+9. Rejected - The bug isn't reproducible or isn't thought of as a bug.
+10. Closed - The bug has been fixed.
+
+## Bug Priority
+
+1. Critical - This type of bug prevents further testing of the product.
+    - Example: A missing menu option or security permission required to access a function.
+2. Major/High - This type of bug causes other functionality to fail to meet requirements.
+    - Example: The wrong field is being updated.
+3. Average/Medium - This type of bug does not follow a standard or convention.
+    - Example: Matching visual and text links which lead to different end points.
+4. Minor/Low - This type of bug is one that does not affect the functionality of the system. (Purely cosmetic)
+
 ## Examples of how to figure out test cases
 
-Start by going to http://spree.shiftedtech.com/
+- Think about anything that could possibly go wrong.
+- There should usually be a single positive case and multiple negative cases being tested.
+- Doing the wrong things will produce the correct errors.
+
+Start by going to <http://spree.shiftedtech.com/>
 
 1. Check that there are no broken images on the home page.
 2. Check that all the navigation buttons take you to their intended pages.
@@ -92,7 +186,14 @@ Start by going to http://spree.shiftedtech.com/
     1. Query your database for the amount of mugs that fit this price range.
     2. Check that the amount from the query is the amount found on the GUI of your application.
 17. Check that the search bar returns proper results.
-    1. Is the search bar able to find products when given a fully capitalized search critera: "T-SHIRT"
+    1. Is the search bar able to find products when given a fully capitalized search criteria: "T-SHIRT"
     2. Is the search bar able to handle an empty string in the search bar without crashing the application?
     3. Is the search bar able to handle escape characters properly in order to avoid SQL injection attacks?
-    4. Is the search bar able to handle partial matches of search critera: "t-sh"
+    4. Is the search bar able to handle partial matches of search criteria: "t-sh"
+18. Try to create a new account.
+    1. Check that a taken email cannot be used.
+    2. Check that a email that is not taken can be used.
+    3. Check that you can create an account without using an email.
+    4. Check that the password contains more than 6 characters.
+    5. Check that the password does not contain CERTAIN special characters as decided by the password acceptance criteria.
+    6. Check that you cannot create a new account if your password and password confirmation is different.
