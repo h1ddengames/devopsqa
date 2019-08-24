@@ -2,67 +2,158 @@
 
 ## Software Testing Life Cycle
 
-    1. Requirement Analysis - 
-       1. Documents involved:
-          1. Requirements Specification Documents
-          2. Functional Specification Documents - How does the particular software works
-          3. Design Specification Documents (use cases, etc) - How will the particular software be built
-          4. Use Case Documents - How will the customer use the software
-          5. Test Traceability Matrix for identifying Test Coverage - How many tests are being run for each particular feature/requirement.
-    2. Test Planning - Plan out the testing process
-       1. Documents involved:
-          1. Test Plan - What needs to be tested, when does it need to be tested, how will it be tested? In an agile/scrum environment there is no separate test plan document created. The scrum board will be the test plan. In a waterfall, v-shaped, iterative, or spiral model of software development, there will be a Test Plan Document created during this phase. 
-          2. Test Scenario
-       2. Terms:
-          1. Test Scope - In scope (features that must be tested), out of scope (features that we are not worried about currently)
-          2. Test Environment - Production environment (prod) - what the customer experiences, QA Environment - will be as similar to the production environment as possible, Development Environment (dev) - Should be as close to production as possible but might have a different setup in order to make it easier for the developer to develop the software.
-             1. Code Freeze - Some places don't have more than 2 environments (prod and dev) so they will implement a code freeze where on a certain day, there will be no new code added to the code base by the developers. The QA will now be able to test on the dev environment. Make sure to record the version of the software being tested, when it was tested, and what bugs were found.
-          3. Test Methodologies
-          4. Manual and Automation Testing
-          5. Defect Management
-          6. Configuration Management
-          7. Risk Management
-    3. Test Development - 
-       1. Documents involved:
-          1. Test Plan
-          2. RTM
-          3. Test Cases
-       2. Terms:
-          1. Test Traceability Matrix and Test Coverage
-          2. Test Scenarios Identification and Test Case preparation
-          3. Test data and test script preparation
-          4. Test case reviews and approval
-          5. Base lining under configuration management
-    4. Test Execution - 
-       1. Documents involved:
-          1. Test Cases
-          2. Test Execution report
-          3. Bug report
-          4. Requirement traceability matrix
-    5. Defect Reporting - 
-       1. Documents involved:
-          1. Test report
-          2. Bug report
-       2. Terms:
-          1. Defect logging - using specialized software (Jira) record a description of the bug with steps to reproduce it, the software version, and other relevant data.
-          2. Assigning defect and fixing - A defect must be assigned to a developer in order to have it fixed. The developer can decide if it is a bug, if they can fix it, and when it will be fixed. Sometimes the bug will be assigned to the project manager or test lead and they will be the ones to reassign the bug to a developer.
-          3. Retesting - Once a bug has been marked as fixed or "closed" in the defect tracking software (Jira), you will have to retest using the conditions documented in the bug report.
-          4. Defect closing 
-    6. Retest defects
-    7. Product Delivery - After the software has undergone several tests, the acceptance test is done by the user/client.
-       1. Documents involved:
-          1. Test summary reports
-          2. UAT Test Plan, UAT Test cases
+1. Requirement Analysis
+    1. Documents involved:
+        1. Requirements Specification Documents
+        2. Functional Specification Documents - How does the particular software works
+        3. Design Specification Documents (use cases, etc) - How will the particular software be built
+        4. Use Case Documents - How will the customer use the software
+        5. Test Traceability Matrix for identifying Test Coverage - How many tests are being run for each particular feature/requirement.
+2. Test Planning - Plan out the testing process
+    1. Documents involved:
+        1. Test Plan - What needs to be tested, when does it need to be tested, how will it be tested? In an agile/scrum environment there is no separate test plan document created. The scrum board will be the test plan. In a waterfall, v-shaped, iterative, or spiral model of software development, there will be a Test Plan Document created during this phase.
+        2. Test Scenario
+    2. Terms:
+        1. Test Scope - In scope (features that must be tested), out of scope (features that we are not worried about currently)
+        2. Test Environment - Production environment (prod) - what the customer experiences, QA Environment - will be as similar to the production environment as possible, Development Environment (dev) - Should be as close to production as possible but might have a different setup in order to make it easier for the developer to develop the software.
+            1. Code Freeze - Some places don't have more than 2 environments (prod and dev) so they will implement a code freeze where on a certain day, there will be no new code added to the code base by the developers. The QA will now be able to test on the dev environment. Make sure to record the version of the software being tested, when it was tested, and what bugs were found.
+        3. Test Methodologies
+        4. Manual and Automation Testing
+        5. Defect Management
+        6. Configuration Management
+        7. Risk Management
+3. Test Development
+    1. Documents involved:
+        1. Test Plan
+        2. RTM
+        3. Test Cases
+    2. Terms:
+        1. Test Traceability Matrix and Test Coverage
+        2. Test Scenarios Identification and Test Case preparation
+        3. Test data and test script preparation
+        4. Test case reviews and approval
+        5. Base lining under configuration management
+4. Test Execution
+    1. Documents involved:
+        1. Test Cases
+        2. Test Execution report
+        3. Bug report
+        4. Requirement traceability matrix
+5. Defect Reporting
+    1. Documents involved:
+        1. Test report
+        2. Bug report
+    2. Terms:
+        1. Defect logging - using specialized software (Jira) record a description of the bug with steps to reproduce it, the software version, and other relevant data.
+        2. Assigning defect and fixing - A defect must be assigned to a developer in order to have it fixed. The developer can decide if it is a bug, if they can fix it, and when it will be fixed. Sometimes the bug will be assigned to the project manager or test lead and they will be the ones to reassign the bug to a developer.
+        3. Retesting - Once a bug has been marked as fixed or "closed" in the defect tracking software (Jira), you will have to retest using the conditions documented in the bug report.
+        4. Defect closing
+6. Retest defects
+7. Product Delivery - After the software has undergone several tests, the acceptance test is done by the user/client.
+    1. Documents involved:
+        1. Test summary reports
+        2. Test metrics - measuring the correctness of the testing process:
+            1. Project Related Metrics
+            2. Test size
+            3. Number of test cases run per day - Automated (NTTA)
+            4. Number of test cases run per day - Manual (NTTM)
+            5. Number of test cases created per day - Manual (TCED)
+            6. Total number of review defects (RD)
+            7. Total number of testing defects (TD)
+            8. Process Related Metrics
+            9. Schedule Adherence (SA)
+            10. Effort Variance (EV)
+            11. Schedule Slippage (SS)
+            12. Test cases and scripts rework effort
+            13. Customer Related Metrics
+            14. Percentage of defects leaked per release (PDLRP)
+            15. Percentage of automation per release (PAPR)
+            16. Application Stability Index (ASI)
+        3. UAT Test Plan, UAT Test cases
+
+## 7 Principles of Software Testing
+
+1. Exhaustive testing is not possible.
+2. Defect clustering - most of the bugs found will be concentrated into one or two modules withing the whole system.
+3. Pesticide paradox - test cases will kill bugs like pesticide does but too many test cases will cause problems much like too much pesticide use. Use as much testing as needed to make sure the product has good quality but not so much that it harms the development and use of the product.
+4. Testing shows presence of defects.
+5. Absence of error - be cautious when finding out there are little to no bugs in some software. This could mean that the tests were conducting using the wrong requirements  
+6. Early testing - the cost involved in fixing defects found in the later stages of SDLC (Software Development Life Cycle) will be more costly than finding it and fixing it earlier.
+7. Testing is context dependent - there are many different domains such as: banking, insurance, medical, travel, etc. Different domains must be tested differently since they all have different requirements, functions, risks, and techniques.
+
+## Software Testing Fundamentals
+
+- The goal of software testing is to find bugs as early as possible and to make sure they stay fixed.
+- Testing early saves money and reduces errors because once a feature becomes a core part of the software, it becomes harder to debug it.
+- Testing is a process of executing a program with the intent of finding an error.
+- A good test case is one that has a high probability of finding an undiscovered error.
+- A successful test case is on that uncovers an undiscovered error.
+- If a bug is found by the tester, it is the fault of the developer.
+- If a bug is found by the customer, it is the fault of QA.
+- The biggest cause of bugs is from the specification with the design coming in close second.
+- Testing should stop once any of the following criteria are met:
+  - Deadline has been met.
+  - Once test cases are passing with a certain percentage passed.
+  - Test budget has been depleted.
+  - Coverage of code/functionality/requirements have reached a specified point.
+  - Alpha or Beta testing period ends.
+    - Alpha testing is conducted by the QA team.
+    - Beta testing is conducted by the customers.
+  - The risk in the project is under acceptable limit.
+- Test execution includes the following:
+  - Unit testing - testing individual parts of the software from as small as methods to as large as a single component. Usually done by the developer.
+  - Integration testing - testing that multiple parts of the software are able to work as intended.
+  - System testing - testing that is conducted when software development is nearing completion and most of the features have been implemented. Testing is done to verify that the system complies with the specified requirements.
+  - Acceptance testing - testing is done by the client/customer where they decide if the software complies with the business requirements.
+
+## Required Document Examples
+
+- A traceability matrix is used to track the requirements and to check that the current project requirements are met. Usually one business requirement will generate multiple test cases but for this example, a single test case will satisfy multiple business requirements.
+  - Example:
+    | Business Requirement | Technical Requirement # | Test Case ID |
+    |----------------------|-------------------------|--------------|
+    | B1                   | T94                     | 1            |
+    | B2                   | T95                     | 3            |
+    | B3                   | T96                     | 3            |
+    | B4                   | T97                     | 4            |
+
+- A business requirement specification (or BRD - Business Requirement Document) explains how the application should behave.
+  - Example:
+    | Business Requirement # | Module Name      | Applicable Roles | Description                                                                                                                                                                   |
+    |------------------------|------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | B1                     | Login and Logout | Manager Customer | Customer: A customer can login using the login page. Manager: A manager can login using the login page. Post login homepage will show different links based on role.          |
+    | B2                     | Enquiry          | Manager Customer | Customer: A customer can have multiple bank accounts. They can view only their own balance. Manager: A manager can view the balance of all customers under their supervision. |
+    | B3                     | Fund Transfer    | Manager Customer | Customer: A customer can have transfer funds from their own account to any destination account. Manager: A manager can transfer funds from any account to any other account.  |
+
+- Test cases give a test case number, a name or description, the steps that need to be followed, the data that will be used, and the expected result of the test.
+  - Example:
+    | Test Case # | Test Case    | Test Steps                                                           | Test Data            | Expected Results |
+    |-------------|--------------|----------------------------------------------------------------------|----------------------|------------------|
+    | 1           | Verify Login | 1. Go to Login Page 2. Enter UserID 3. Enter Password 4. Click Login | id=johndoe pass=1234 | Login Successful |
+
+- Technical requirement document (or TRD)
+  - Example:
+    | Test Requirement # | Description                              |
+    |--------------------|------------------------------------------|
+    | T92                | UserID must not be blank.               |
+    | T93                | Password must not be blank.              |
+    | T94                | If UserID and password are valid, login. |
+
+- Combining BRD + TRD within a test case:
+  - Example:
+    | Test Case # | Business Requirement # | Technical Requirement # | Test Case    | Test Steps                                                           | Test Data            | Expected Results |
+    |-------------|------------------------|-------------------------|--------------|----------------------------------------------------------------------|----------------------|------------------|
+    | 1           | B1                     | T94                     | Verify Login | 1. Go to Login Page 2. Enter UserID 3. Enter Password 4. Click Login | id=johndoe pass=1234 | Login Successful |
 
 ## Tasks required for STLC
 
-    - Creating test cases from test scenarios.
-    - Test case reviews.
-    - Generating test data and preparing test scripts.
-    - Creating a test plan through the Jira scrum board.
-    - Execute test scripts.
-    - Creating defect/bug reports in Jira.
-      - Make sure bugs are reproducible and give proper steps to reproduce the bug for the developer to see.
+- Creating test cases from test scenarios.
+- Test case reviews.
+- Generating test data and preparing test scripts.
+- Creating a test plan through the Jira scrum board.
+- Execute test scripts.
+- Creating defect/bug reports in Jira.
+  - Make sure bugs are reproducible and give proper steps to reproduce the bug for the developer to see.
 
 ## Test Plan in Agile/Scrum
 
@@ -96,30 +187,37 @@
   - Premature release risk
     - Most common risks associated with releasing unsatisfactory or untested Software Products.
 
-## Software Testing Fundamentals
+## Skills Required for Testers
 
-- The goal of software testing is to find bugs as early as possible and to make sure they stay fixed.
-- Testing early saves money and reduces errors because once a feature becomes a core part of the software, it becomes harder to debug it.
-- Testing is a process of executing a program with the intent of finding an error.
-- A good test case is one that has a high probability of finding an undiscovered error.
-- A successful test case is on that uncovers an undiscovered error.
-- If a bug is found by the tester, it is the fault of the developer.
-- If a bug is found by the customer, it is the fault of QA.
-- The biggest cause of bugs is from the specification with the design coming in close second.
-- Testing should stop once any of the following criteria are met:
-  - Deadline has been met.
-  - Once test cases are passing with a certain percentage passed.
-  - Test budget has been depleted.
-  - Coverage of code/functionality/requirements have reached a specified point.
-  - Alpha or Beta testing period ends.
-    - Alpha testing is conducted by the QA team.
-    - Beta testing is conducted by the customers.
-  - The risk in the project is under acceptable limit.
-- Test execution includes the following:
-  - Unit testing - testing individual parts of the software from as small as methods to as large as a single component. Usually done by the developer.
-  - Integration testing - testing that multiple parts of the software are able to work as intended.
-  - System testing - testing that is conducted when software development is nearing completion and most of the features have been implemented. Testing is done to verify that the system complies with the specified requirements.
-  - Acceptance testing - testing is done by the client/customer where they decide if the software complies with the business requirements.
+- Soft Skills (Non-Technical Attributes)
+  - Disciple and Perseverance
+    - Testing is repetitive
+      - Have to withstand the pressure and workload
+      - Be able to say "no" when quality is insufficient
+    - Reading Skills
+      - Be able to study many documents and specifications
+    - Communication and Interpreter Skills
+      - Both verbal and written communication
+      - Diplomatic skill (sensitive in dealing with others)
+      - Be able to communicate with technical and non-technical people.
+    - Attitude
+      - Have a test to break attitude
+      - Negative thinking
+        - Be able to foresee that things can and usually do go wrong, evaluate and manage risks.
+    - Time Management and Effort Prioritization
+
+## Error, Bug, Fault, Failure
+
+- Error - an error is a human action that produces the incorrect result that results in a fault.
+- Bug - the presence of error at the time of execution of the software.
+- Fault - the state of the software that an error causes.
+- Failure - deviation of the software from its expected result. This is an event.
+
+1. Error
+2. Fault
+3. Bug
+4. Failure
+5. Defect
 
 ## Bug Life Cycle
 
