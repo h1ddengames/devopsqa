@@ -6,7 +6,7 @@ Development + Operations + Quality Assurance knowledge all in one place.
 
 - To minimize the amount of time you need to verify my QA skills, use this link to see a showcase of my skills: <a href=https://github.com/h1ddengames/devopsqa/tree/master/QA/QA-Automation-Mindmap/Testing/db-api-jenkins/jenkins/home/qashowcase/src/main/java>QA Showcase As a Java Project</a>
 
-- To see the knowledge I've gathered here in these markdown files relating to QA Automation: <a href=https://github.com/h1ddengames/devopsqa/blob/master/QA/QA-Automation-Mindmap/Automation-Frameworks.md>Automation Frameworks</a> AND <a href=https://github.com/h1ddengames/devopsqa/blob/master/QA/QA-Automation-Mindmap/Testing-Types.md>Testing Types</a>
+- To see the knowledge I've gathered here in these markdown files relating to QA Automation: <b><a href=https://github.com/h1ddengames/devopsqa/blob/master/QA/QA-Automation-Mindmap/STLC-IN-DEPTH.md>Software Testing Life Cycle in-depth</a></b> AND <a href=https://github.com/h1ddengames/devopsqa/blob/master/QA/QA-Automation-Mindmap/Automation-Frameworks.md>Automation Frameworks</a> AND <a href=https://github.com/h1ddengames/devopsqa/blob/master/QA/QA-Automation-Mindmap/Testing-Types.md>Testing Types</a>
 
 #
 ## Opening Notes
