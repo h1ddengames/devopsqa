@@ -2,6 +2,15 @@
 
 ## Software Testing Life Cycle
 
+- Software Testing Life Cycle is the process of executing a program or application with the intent of finding software bugs. It can also be defined as the process of validating and verifying that software program or application or product meets the business and technical requirements that guided it's design and development.
+- To paraphrase the above: "software testing is a process to verify that application is working as per user requirements."
+- Software Testing is usually associated with the terms verification and validation.
+  - Validation - Are we doing the right job?
+    - Validation is the process of checking that what has been specified is what the user actually wanted.
+  - Verification - Are we doing the job right?
+    - Verification is checking or testing of items, including software, for conformance and consistency with an associated specification.
+  - Validation is done on software while verification is done on the specification.
+
 1. Requirement Analysis
     1. Documents involved:
         1. Requirements Specification Documents
@@ -254,6 +263,82 @@
 3. Average/Medium - This type of bug does not follow a standard or convention.
     - Example: Matching visual and text links which lead to different end points.
 4. Minor/Low - This type of bug is one that does not affect the functionality of the system. (Purely cosmetic)
+
+## Test Scenario vs Test Case
+
+- A test case is a set of test data and test programs (test scripts) and their expected results.
+- A test case validates one or more system requirements and generates a pass or fail output.
+- A test case contains the following elements:
+  - Pre-conditions (prerequisites)
+  - Steps to execute
+  - Test data
+  - Expected behavior
+  - Pass/Fail criteria
+- A test scenario is a business requirement to be tested.
+- A test scenario contains a set of test cases that ensure that the business process flow are being tested.
+- A test scenario can be derived from BRS/SRS/Use case document where functionality of the application is described in a broader sense.
+- While a test case is concerned with a single functionality, a test scenario is concerned with end to end transaction with a business point of view.
+
+## Creating test cases from requirement analysis
+
+- Let's say that we have some software that records students grades where the values can be between 0 and 100. How many test cases can you think of?
+    1. Positive test cases + boundary value analysis
+       1. Test with a value of 0.
+       2. Test with a value of 1.
+       3. Test with a value of 99.
+       4. Test with a value of 100.
+    2. Negative test cases + boundary value analysis
+       1. Test with a value of -1.
+       2. Test with a value of 101.
+    3. Negative test cases
+       1. Test with letters of the alphabet "abc"
+       2. Test with letters of another language such as korean.
+       3. Test with a mix of letters and numbers "13abc"
+       4. Test with a mix of letters and number "bc35"
+       5. Test with special characters "$#@!%^"
+       6. Test with special characters "3#"
+       7. Test with special characters "%42"
+       8. Test with float values with one place after the decimal "50.5"
+       9. Test with float values with two places after the decimal "32.17"
+
+- If you have limited time to test then negative test cases are worth the time to think of and implement because of the following example:
+  - Say for example that you are in charge of testing a e-commerce application. You login and add products to cart and go to buy the items while providing invalid credit card information. The application allows you to buy the item and updates the database to ship you the item. This would make the company lose money in shipping and giving you the product without getting money equal to the set cost of the product.
+  - The above negative test passing would bankrupt the company if every person was able to follow the same steps and get products for free.
+  - Think of the opposite positive test of logging in, adding products to cart, going to buy the items and giving a valid credit card information. If the test passes, great! The company gets money for the bought product. Even if the test fails, it's not as bad as the negative test case passing because if a user can't buy the product then the company doesn't make money but at the very least it doesn't LOSE money.
+
+## Writing good test cases
+
+- Write test cases such that only one thing is being tested at a time.
+- Ensure that you are testing both positive and negative scenarios.
+  - Example:
+    - Positive test case - Login feature where your login is successful.
+    - Negative test case - Login feature where you use incorrect username and are unsuccessful in logging in.
+  - Write in simple and easy to understand language.
+  - Use an active voice such as "do this" or "do that"
+  - Use exact and consistent names (of forms, fields, etc)
+  - Be accurate with what the purpose of the test is.
+  - Be economical with your words. Do not include unnecessary steps or words.
+  - Make sure that you are able to trace the test case to the requirement it was created from.
+  - Make sure the test can be repeated over and over again.
+  - Make the test case as reusable as possible.
+  - Make sure others can understand your test cases because you will not always be the one implementing or running the test cases.
+  - Test cases are derived from test scenarios. Test scenarios are derived from use cases.
+    - Examples:
+      - Use case: User logs into the web application using a username and password.
+      - Test Scenario: Validate the login page.
+        - Test case 1: Enter a valid username and password.
+        - Test case 2: Reset your password.
+        - Test case 3: Enter invalid credentials.
+  - Creating test cases from use cases
+    - Examples:
+      - The "normal" basic flow of your application would be the "happy path"
+        - You go to amazon, sign in, shop for a tie, add tie to cart, go to cart and buy.
+      - There are several alternate flows that may happen. Checking these alternate flows usually find bugs.
+        - You go to amazon, and try to sign in but you are greeted by an error page with no way back.
+        - You go to amazon, and sign in but are unable to add anything to your cart.
+      - Try to do things in an our of order way
+        - You go to amazon but you look for a tie first, then add it to your cart then you sign in and buy.
+        - You go to amazon but you go to your cart then you sign in then you look for a tie.
 
 ## Examples of how to figure out test cases
 
