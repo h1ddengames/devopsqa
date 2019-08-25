@@ -119,6 +119,7 @@
 
 - A traceability matrix is used to track the requirements and to check that the current project requirements are met. Usually one business requirement will generate multiple test cases but for this example, a single test case will satisfy multiple business requirements.
   - Example:
+
     | Business Requirement | Technical Requirement # | Test Case ID |
     |----------------------|-------------------------|--------------|
     | B1                   | T94                     | 1            |
@@ -128,6 +129,7 @@
 
 - A business requirement specification (or BRD - Business Requirement Document) explains how the application should behave.
   - Example:
+
     | Business Requirement # | Module Name      | Applicable Roles | Description                                                                                                                                                                   |
     |------------------------|------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     | B1                     | Login and Logout | Manager Customer | Customer: A customer can login using the login page. Manager: A manager can login using the login page. Post login homepage will show different links based on role.          |
