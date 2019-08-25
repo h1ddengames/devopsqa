@@ -136,12 +136,14 @@
 
 - Test cases give a test case number, a name or description, the steps that need to be followed, the data that will be used, and the expected result of the test.
   - Example:
+
     | Test Case # | Test Case    | Test Steps                                                           | Test Data            | Expected Results |
     |-------------|--------------|----------------------------------------------------------------------|----------------------|------------------|
     | 1           | Verify Login | 1. Go to Login Page 2. Enter UserID 3. Enter Password 4. Click Login | id=johndoe pass=1234 | Login Successful |
 
 - Technical requirement document (or TRD)
   - Example:
+
     | Test Requirement # | Description                              |
     |--------------------|------------------------------------------|
     | T92                | UserID must not be blank.               |
@@ -150,6 +152,7 @@
 
 - Combining BRD + TRD within a test case:
   - Example:
+
     | Test Case # | Business Requirement # | Technical Requirement # | Test Case    | Test Steps                                                           | Test Data            | Expected Results |
     |-------------|------------------------|-------------------------|--------------|----------------------------------------------------------------------|----------------------|------------------|
     | 1           | B1                     | T94                     | Verify Login | 1. Go to Login Page 2. Enter UserID 3. Enter Password 4. Click Login | id=johndoe pass=1234 | Login Successful |
