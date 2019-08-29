@@ -220,6 +220,34 @@
         - Be able to foresee that things can and usually do go wrong, evaluate and manage risks.
     - Time Management and Effort Prioritization
 
+## Testing Types
+
+- Testing
+  - White box testing - Having access to the code, you know why and how something works.
+    - Unit testing - Usually done by the programmer since they are the one generating the code in the first place. This type of testing involves something as minimal checking individual methods to something as large as a module within a system.
+  - Grey box testing - Having partial access to the code, you care about how it works and that it does in fact work equally.
+    - API testing - This type of testing is done on an API (Application Programming Interface). You have access to an URI (Uniform Resource Identifier) where you can send requests (GET, POST, PUT, PATCH, DELETE) with some parameters to change depending on the request.
+  - Black box testing - Having no access to the code, you only care that it works.
+    - Non functional testing - We are testing the aspects that do not fall into the functional aspects to be tested. Instead of testing towards verifying that the software meets the requirements, we are validating that it's being done in the correct way.
+      - Load - Testing how many concurrent users it will take until the system slows down.
+      - Performance - Testing how long does it take for a single user.
+      - Volume - Testing ow much data can the system handle.
+      - Stress - Testing how does the system work under suboptimal situations.
+      - Fail Over - If the system crashes, how well does the system recover from a crash.
+    - Functional testing - We are testing that the application behaves according to the requirements given by the client/user.
+      - Backend - What goes on in the background to make sure everything works.
+        - Data warehouse
+        - Store procedure
+        - Data migration
+      - Frontend - What you see in front of you.
+        - UI
+        - Navigation
+        - Functional
+        - Workflow
+- Acceptance Testing - Formal testing conducted to determine whether or not a system satisfies its acceptance criteria and to enable the customer to determine whether or not tho accept the system.
+- Accessibility Testing - Type of testing which determines the usability of a product to people that have disabilities (deaf, blind, mentally disabled, colorblind, etc)
+- Agile Testing - Software testing practice that follows the principles of the agile manifesto, emphasizing testing from the perspective of customers who will utilize the system. It is usually performed by QA teams.
+
 ## Error, Bug, Fault, Failure
 
 - Error - an error is a human action that produces the incorrect result that results in a fault.
@@ -268,6 +296,68 @@
 3. Average/Medium - This type of bug does not follow a standard or convention.
     - Example: Matching visual and text links which lead to different end points.
 4. Minor/Low - This type of bug is one that does not affect the functionality of the system. (Purely cosmetic)
+
+## Bug reporting with Jira
+
+- NOTE: Each company will handle Jira differently. Since Jira is so customizable and each company has different needs, the following is only supposed to be a guideline.
+
+- The following information is taken directly from <https://community.atlassian.com/t5/Jira-Core-questions/epic-vs-story-vs-task/qaq-p/204224> :
+- Epic - A general use case that is a collection of features (user stories). (Use Fibonacci numbers to estimate.)
+- User Story - Represents a user feature. (Use Fibonacci numbers to estimate.)
+- Sub-Task - Represents development tasks to accomplish the user story. (No story point estimates.) Generally no more than 1-day tasks. You can either count the number of sub-tasks or time estimate in days in your retrospective to evaluate if your story point estimate for the User Story was accurate and adjust accordingly - assuming you have some velocity history to compare to.
+- (Engineering) Task - We used to call these "Dev Stories" (in a pre-Jira project) - represents a set of engineering work that is not directly related to a user story. The team should try to anticipate "Dev Stories" and add them to the backlog sooner than later with estimates (Use Fibonacci numbers to estimate) so the PO can plan milestones.
+
+- An example of these distinctions could be:
+
+  - Epic: User Authentication.
+  - User Stories:
+    - User Login screen.
+    - Forgot Password workflow.
+    - Lock account after too many failed attempts.
+    - Google login support.
+    - Facebook login support.
+  - Sub-Tasks:
+    - User Login screen:
+      - Design login page.
+      - Cut SVG icons and images.
+      - Implement login page HTML/CSS/JS.
+      - Create SQL scripts to create tables.
+      - Create SQL scripts for stored procedures.
+      - Create web service REST API for user resource.
+      - Hook up login page to web service REST API.
+    - Forgot Password workflow:
+      - ...
+  - (Engineering) Tasks:
+    - Setup GitHub project repo.
+    - Setup GCP (or AWS) account, containers, and services.
+    - (There might be Sub-Tasks for these too)
+    - ...
+    - Setup Jenkins CI pipeline.
+    - Design overall (high-level) system architecture.
+    - Research and decide on unit test and mocking framework.
+
+- The following is the default fields you will have to fill out when creating an issue:
+  - Project - What project does this issue belong to? (There will be several projects being worked on at the same time so you'll have to specify which one you are creating an issue for.)
+  - Issue type - What is the type of issue you are making? NOTE: The company you work for will decide what each issue type will be called but the defaults are:
+    - Epic
+    - Story
+    - Task
+    - Bug
+  - Summary - This should be a one sentence summary that describes what the issue is.
+  - Description - The steps required to resolve this issue should be listed here. For a bug report, you should write down where the bug is and the steps to reproduce the bug.
+  - Fix Version/s - When should this issue be fixed?
+  - Priority - How soon should work begin on this issue?
+  - Labels - An easy way to identify groups of issues.
+  - Attachments - Any files that need to be attached to this issue to make it easier to resolve.
+  - Linked Issues - Specify if this issue requires you to deal with another issue first or if this issue will block work on another issue until this one is done.
+  - Assignee - Who will work on this issue. Often times the project manager or test lead will decide who to assign an issue to.
+  - Epic Link - If this issue belongs to an epic, mark which epic it belongs to here.
+  - Sprint - The issue can be assigned to the following sprint or a future one.
+
+- An alternative way of thinking about Epics, Stories, and Tasks can be:
+  - An epic is like a feature file in BDD/BDT.
+  - A story is like the scenarios within a specific feature file.
+  - A task is the set of steps defined below each scenario.
 
 ## Test Scenario vs Test Case
 
@@ -344,6 +434,22 @@
       - Try to do things in an our of order way
         - You go to amazon but you look for a tie first, then add it to your cart then you sign in and buy.
         - You go to amazon but you go to your cart then you sign in then you look for a tie.
+
+## Creating new test cases vs updating old ones
+
+- Usually when you join a company, they will have the most basic test cases covered for most of their web application's functionality.
+- In an agile/scrum environment, new functionality will be added.
+- You have to check to see if this new functionality changes some already implemented functionality or if it's totally new functionality in addition to the functionality the application had before.
+- If the functionality is totally new, then you must write new test cases to cover all the business requirements.
+- If the functionality is replacing old functionality, then you must update the test cases that corresponds to that functionality's new business requirements.
+
+- For example:
+  - You have a login page with two textboxes: username and password.
+  - New functionality has been added:
+    - You may login using a token instead of your password by inputting the token into a token textbox.
+      - Since adding a new textbox doesn't affect the previous username/password combo, new test scripts must be created to accommodate testing for the new textbox.
+    - For the sake of the example, let's say that the username textbox was converted into a dropdown instead.
+      - Since the textbox has changed to a dropbox the old scripts must be updated to now choose from a dropdown rather than entering text into a textbox.
 
 ## Examples of how to figure out test cases
 
