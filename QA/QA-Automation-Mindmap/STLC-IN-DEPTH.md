@@ -80,6 +80,8 @@
             16. Application Stability Index (ASI)
         3. UAT Test Plan, UAT Test cases
 
+***
+
 ## 7 Principles of Software Testing
 
 1. Exhaustive testing is not possible.
@@ -89,6 +91,8 @@
 5. Absence of error - be cautious when finding out there are little to no bugs in some software. This could mean that the tests were conducting using the wrong requirements  
 6. Early testing - the cost involved in fixing defects found in the later stages of SDLC (Software Development Life Cycle) will be more costly than finding it and fixing it earlier.
 7. Testing is context dependent - there are many different domains such as: banking, insurance, medical, travel, etc. Different domains must be tested differently since they all have different requirements, functions, risks, and techniques.
+
+***
 
 ## Software Testing Fundamentals
 
@@ -114,6 +118,8 @@
   - Integration testing - testing that multiple parts of the software are able to work as intended.
   - System testing - testing that is conducted when software development is nearing completion and most of the features have been implemented. Testing is done to verify that the system complies with the specified requirements.
   - Acceptance testing - testing is done by the client/customer where they decide if the software complies with the business requirements.
+
+***
 
 ## Required Document Examples
 
@@ -159,6 +165,8 @@
     |-------------|------------------------|-------------------------|--------------|----------------------------------------------------------------------|----------------------|------------------|
     | 1           | B1                     | T94                     | Verify Login | 1. Go to Login Page 2. Enter UserID 3. Enter Password 4. Click Login | id=johndoe pass=1234 | Login Successful |
 
+***
+
 ## Tasks required for STLC
 
 - Creating test cases from test scenarios.
@@ -169,6 +177,8 @@
 - Creating defect/bug reports in Jira.
   - Make sure bugs are reproducible and give proper steps to reproduce the bug for the developer to see.
 
+***
+
 ## Test Plan in Agile/Scrum
 
 - In Agile, most of the requirements are not given at the beginning of the project. Instead, the requirements will be added during sprints.
@@ -178,6 +188,8 @@
 - The test plan will not be a through overview of what to expect but rather it identifies risks and assumptions to reduce surprises later.
 - The test plan will communicate objectives to all team members.
 
+***
+
 ## Test coverage
 
 - Not every requirement can be tested. Test coverage is a measure of how many testable requirements you were able to cover with your test.
@@ -185,6 +197,8 @@
   - Let's say you have 20 requirements to test.
   - Not all 20 of them will be testable.
   - You need to find out which requirements are testable.
+
+***
 
 ## Risk Analysis
 
@@ -200,6 +214,8 @@
     - Most common risks associated with Software Testing for the platform being worked on, the tools being used, and test methods being applied.
   - Premature release risk
     - Most common risks associated with releasing unsatisfactory or untested Software Products.
+
+***
 
 ## Skills Required for Testers
 
@@ -219,6 +235,8 @@
       - Negative thinking
         - Be able to foresee that things can and usually do go wrong, evaluate and manage risks.
     - Time Management and Effort Prioritization
+
+***
 
 ## Testing Types
 
@@ -248,6 +266,8 @@
 - Accessibility Testing - Type of testing which determines the usability of a product to people that have disabilities (deaf, blind, mentally disabled, colorblind, etc)
 - Agile Testing - Software testing practice that follows the principles of the agile manifesto, emphasizing testing from the perspective of customers who will utilize the system. It is usually performed by QA teams.
 
+***
+
 ## Error, Bug, Fault, Failure
 
 - Error - an error is a human action that produces the incorrect result that results in a fault.
@@ -260,6 +280,8 @@
 3. Bug
 4. Failure
 5. Defect
+
+***
 
 ## Bug Life Cycle
 
@@ -274,6 +296,8 @@
 5. If the defect is no longer found, then the defect is closed.
 6. If the same defect is found again, the the defect is reopened and goes through these same steps again.
 
+***
+
 ## Bug Status
 
 1. New - The bug has just been reported by the qa team.
@@ -287,6 +311,8 @@
 9. Rejected - The bug isn't reproducible or isn't thought of as a bug.
 10. Closed - The bug has been fixed.
 
+***
+
 ## Bug Priority
 
 1. Critical - This type of bug prevents further testing of the product.
@@ -296,6 +322,8 @@
 3. Average/Medium - This type of bug does not follow a standard or convention.
     - Example: Matching visual and text links which lead to different end points.
 4. Minor/Low - This type of bug is one that does not affect the functionality of the system. (Purely cosmetic)
+
+***
 
 ## Bug reporting with Jira
 
@@ -359,6 +387,8 @@
   - A story is like the scenarios within a specific feature file.
   - A task is the set of steps defined below each scenario.
 
+***
+
 ## Test Scenario vs Test Case
 
 - A test case is a set of test data and test programs (test scripts) and their expected results.
@@ -373,6 +403,8 @@
 - A test scenario contains a set of test cases that ensure that the business process flow are being tested.
 - A test scenario can be derived from BRS/SRS/Use case document where functionality of the application is described in a broader sense.
 - While a test case is concerned with a single functionality, a test scenario is concerned with end to end transaction with a business point of view.
+
+***
 
 ## Creating test cases from requirement analysis
 
@@ -400,6 +432,8 @@
   - Say for example that you are in charge of testing a e-commerce application. You login and add products to cart and go to buy the items while providing invalid credit card information. The application allows you to buy the item and updates the database to ship you the item. This would make the company lose money in shipping and giving you the product without getting money equal to the set cost of the product.
   - The above negative test passing would bankrupt the company if every person was able to follow the same steps and get products for free.
   - Think of the opposite positive test of logging in, adding products to cart, going to buy the items and giving a valid credit card information. If the test passes, great! The company gets money for the bought product. Even if the test fails, it's not as bad as the negative test case passing because if a user can't buy the product then the company doesn't make money but at the very least it doesn't LOSE money.
+
+***
 
 ## Writing good test cases
 
@@ -435,6 +469,8 @@
         - You go to amazon but you look for a tie first, then add it to your cart then you sign in and buy.
         - You go to amazon but you go to your cart then you sign in then you look for a tie.
 
+***
+
 ## Creating new test cases vs updating old ones
 
 - Usually when you join a company, they will have the most basic test cases covered for most of their web application's functionality.
@@ -450,6 +486,8 @@
       - Since adding a new textbox doesn't affect the previous username/password combo, new test scripts must be created to accommodate testing for the new textbox.
     - For the sake of the example, let's say that the username textbox was converted into a dropdown instead.
       - Since the textbox has changed to a dropbox the old scripts must be updated to now choose from a dropdown rather than entering text into a textbox.
+
+***
 
 ## Examples of how to figure out test cases
 
